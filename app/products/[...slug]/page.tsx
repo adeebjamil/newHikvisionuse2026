@@ -217,7 +217,7 @@ export default function ProductsCatchAllPage({ params }: { params: Promise<{ slu
       <main className="min-h-screen bg-gray-50 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 py-20 text-center flex flex-col items-center justify-center">
            <div className="w-12 h-12 border-4 border-maroon border-t-transparent rounded-full animate-spin mb-4" />
-           <p className="text-gray-400 font-black uppercase tracking-widest text-[10px]">Synchronizing Catalog...</p>
+           <p className="text-gray-400 font-black uppercase tracking-widest text-[10px]">Synchronizing Products...</p>
         </div>
       </main>
     );
