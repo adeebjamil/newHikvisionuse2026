@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import { Product } from '@/models/Product';
+import { Category } from '@/models/Category'; // Ensure model is registered
+import { SubCategory } from '@/models/SubCategory'; // Ensure model is registered
 
 export async function GET(
   request: Request,

@@ -53,11 +53,15 @@ export default function Footer() {
             <div>
               <h4 className="text-sm font-black uppercase tracking-[0.2em] text-gray-900 dark:text-white mb-8">Quick Links</h4>
               <ul className="space-y-4">
-                {["Home", "About Us", "Contact Us"].map((link) => (
-                  <li key={link}>
-                    <Link href={`/${link.toLowerCase().replace(" ", "-")}`} className="text-sm text-gray-500 hover:text-maroon flex items-center gap-2 transition-colors group">
+                {[
+                  { name: "Home", href: "/" },
+                  { name: "About Us", href: "/about" },
+                  { name: "Contact Us", href: "/contact" }
+                ].map((link) => (
+                  <li key={link.name}>
+                    <Link href={link.href} className="text-sm text-gray-500 hover:text-maroon flex items-center gap-2 transition-colors group">
                       <div className="w-1.5 h-1.5 rounded-full bg-gold opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {link}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
