@@ -1,0 +1,1040 @@
+[
+  {
+    "_id": "69eb13dc695f1fc9132f3e8c",
+    "slug": "DS-2CD1021G0-I",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "2 MP Fixed Bullet Network Camera",
+    "features": [
+      "High quality imaging with 2 MP resolution",
+      "IP67-rated water and dust resistance for outdoor durability",
+      "Easy installation with Power over Ethernet (PoE) technology"
+    ],
+    "images": [
+      "/uploads/1777366795584-DS-2CD1021G0-I-筒机62-基线-红外-无mic-左侧.png"
+    ],
+    "name": "DS-2CD1021G0-I",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.9\" Progressive Scan CMOS",
+        "Max_Resolution": "1920 × 1080",
+        "Min_Illumination": "Color: 0.01 Lux @ (F2.2, AGC ON), B/W: 0 Lux with IR",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 360°, Tilt: 0° to 90°, Rotate: 0° to 360°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8 and 4 mm optional",
+        "Focal_Length_FOV": "2.8 mm: Horizontal FOV 94°, Vertical FOV 51°, Diagonal FOV 112°; 4 mm: Horizontal FOV 80°, Vertical FOV 44°, Diagonal FOV 94°",
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F2.2"
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "25 fps (1920 × 1080, 1280 × 720)",
+          "60_Hz": "30 fps (1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (640 × 480, 640 × 360)"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265+/H.265/H.264+/H.264",
+          "Sub_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 8 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "Bit_Rate_Control": "CBR, VBR"
+      },
+      "Network": {
+        "Security": "Password protection, complicated password, watermark, basic and digest authentication for HTTP, security audit log, host authentication (MAC address)",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ISAPI, SDK",
+        "Protocols": "TCP/IP, ICMP, DHCP, DNS, HTTP, RTP, RTSP, NTP, IGMP, UDP, QoS",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200",
+        "Web_Browser": "Plug-in required live view: IE 10, IE 11; Local service: Chrome 57.0+, Firefox 52.0+"
+      },
+      "Image": {
+        "Wide_Dynamic_Range": "Digital WDR",
+        "SNR": "≥ 52 dB",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Image_Settings": "Saturation, brightness, contrast, sharpness, gain, white balance, adjustable by client software or web browser"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.41 A, max. 5 W, Ø5.5 mm coaxial power plug, reverse polarity protection, PoE: IEEE 802.3af, Class 3, max. 6.5 W",
+        "Material": "Plastic",
+        "Dimension": "138.8 mm × 60.9 mm × 57.9 mm (5.5\" × 2.4\" × 2.3\")",
+        "Package_Dimension": "163 mm × 75 mm × 75 mm (6.4\" × 3.0\" × 3.0\")",
+        "Weight": "Approx. 175 g (0.4 lb.)",
+        "With_Package_Weight": "Approx. 250 g (1.1 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F). Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F). Humidity 95% or less (non-condensing)",
+        "Language": "English, Ukrainian",
+        "General_Function": "Heartbeat, anti-banding, mirror, password protection, password reset via email"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "2 MP Fixed Bullet Network Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "High quality imaging with 2 MP resolution",
+      "IP67-rated water and dust resistance for outdoor durability",
+      "Easy installation with Power over Ethernet (PoE) technology"
+    ]
+  },
+  {
+    "_id": "69eb13dc695f1fc9132f3e8d",
+    "slug": "DS-2CD1743G0-I-Z",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "4 MP Varifocal Dome Camera",
+    "features": [
+      "4 MP high-quality imaging for clear surveillance",
+      "120 dB WDR for strong backlight performance",
+      "2.8–12 mm motorized varifocal lens for flexible monitoring",
+      "H.265+ compression for efficient storage and bandwidth",
+      "EXIR 2.0: advanced infrared tech with long IR range",
+      "IP67 water/dust resistance and IK10 vandal protection"
+    ],
+    "images": [
+      "/uploads/1777369639990-DS-2CD1743G0-I(Z).png"
+    ],
+    "name": "DS-2CD1743G0-I(Z)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/3\" Progressive Scan CMOS",
+        "Max_Resolution": "2560 × 1440",
+        "Min_Illumination": "Color: 0.005 Lux @(F1.6, AGC ON), B/W: 0 Lux with IR",
+        "Shutter_Speed": "1/3 s to 1/100,000 s",
+        "Wide_Dynamic_Range": "120 dB",
+        "Day_Night": "IR Cut Filter",
+        "Angle_Adjustment": "Pan: 0° to 355°, Tilt: 0° to 70°, Rotation: 0° to 355°"
+      },
+      "Lens": {
+        "Lens_Type": "Varifocal Lens, motoried lens, 2.8 to 12 mm",
+        "Focal_Length_FOV": "2.8 to 12 mm: Horizontal FOV 102° to 31°, Vertical FOV 54° to 17°, Diagonal FOV 123° to 35°",
+        "Lens_Mount": "Ø14",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6"
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "20 fps (2560 × 1440), 25 fps (1920 × 1080, 1280 × 720)",
+          "60_Hz": "20 fps (2560 × 1440), 30 fps (1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265+/H.265/H.264+/H.264",
+          "Sub_Stream": "H.265/H.264/MJPEG"
+        },
+        "Video_Bit_Rate": "32 Kbps to 8 Mbps",
+        "H264_Type": "Baseline Profile/Main Profile/High Profile",
+        "H265_Type": "Main Profile",
+        "Region_of_Interest": "1 fixed region for main stream"
+      },
+      "Audio": {
+        "Audio_Compression": "-S: G.711ulaw/G.711alaw/G.722.1/G.726/MP2L2/PCM/AAC",
+        "Audio_Bit_Rate": "-S: 64 Kbps (G.711)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/16 to 64 Kbps (AAC)",
+        "Audio_Sampling_Rate": "-S: 8 kHz/16 kHz",
+        "Environment_Noise_Filtering": "-S: Yes"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP™, SMTP, IGMP, 802.1X, QoS, IPv6, Bonjour, IPv4, UDP, SSL/TLS",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "Open Network Video Interface, ISAPI",
+        "User_Host": "Up to 32 users. 3 levels: administrator, operator and user",
+        "Network_Storage": "MicroSD/SDHC/SDXC card (256 GB) local storage",
+        "Client": "iVMS-4200, Hik-Connect",
+        "Web_Browser": "Plug-in required live view: IE 10+; Plug-in free live view: Chrome 57.0+, Firefox 52.0+; Local service: Chrome 57.0+, Firefox 52.0+"
+      },
+      "Image": {
+        "Image_Settings": "Saturation, brightness, contrast, sharpness, AGC, white balance adjustable by client software or web browser",
+        "Day_Night_Switch": "Auto, Schedule, Day, Night",
+        "Image_Enhancement": "BLC, 3D DNR"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.8 A, max. 10 W, Ø5.5 mm coaxial power plug; PoE: 802.3af, Class 3, 36 V to 57 V, 0.32 A to 0.2 A, max. 11.5 W",
+        "Camera_Material": "Metal",
+        "Camera_Dimension": "Ø141 mm × 99.9 mm (Ø5.6\" × 3.9\")",
+        "Package_Dimension": "140 mm × 140 mm × 154 mm (5.5\" × 5.5\" × 6.1\")",
+        "Camera_Weight": "Approx. 820 g (1.8 lb.)",
+        "With_Package_Weight": "Approx. 1200 g (2.6 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (22 °F to +140 °F). Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (22 °F to +140 °F). Humidity 95% or less (non-condensing)",
+        "Language": "English, Ukrainian",
+        "General_Function": "Anti-flicker, heartbeat, mirror, password protection, privacy mask, watermark, IP address filter"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "4 MP Varifocal Dome Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "4 MP high-quality imaging for clear surveillance",
+      "120 dB WDR for strong backlight performance",
+      "2.8–12 mm motorized varifocal lens for flexible monitoring",
+      "H.265+ compression for efficient storage and bandwidth",
+      "EXIR 2.0: advanced infrared tech with long IR range",
+      "IP67 water/dust resistance and IK10 vandal protection"
+    ]
+  },
+  {
+    "_id": "69eb13dc695f1fc9132f3e8e",
+    "slug": "DS-2CD2043G2-LI-2U",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "4 MP AcuSense Hybrid Bullet Camera",
+    "features": [
+      "4 MP high-quality imaging for sharp surveillance",
+      "AcuSense technology for accurate human and vehicle classification",
+      "Smart Hybrid Light with IR and white light, 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio monitoring",
+      "120 dB true WDR for clear imaging in strong backlight",
+      "H.265+ compression and IP67 water/dust resistance"
+    ],
+    "images": [
+      "/uploads/1777369661708-DS-2CD2043G2-LI(2U).png"
+    ],
+    "name": "DS-2CD2043G2-LI(2U)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.9\" Progressive Scan CMOS",
+        "Max_Resolution": "2688 × 1520",
+        "Min_Illumination": "Color: 0.005 Lux @ (F1.6, AGC ON), 0 Lux with light",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 360°, Tilt: 0° to 90°, Rotate: 0° to 360°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8, 4, and 6 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 104°, Vertical FOV 57°, Diagonal FOV 122°",
+          "4 mm": "Horizontal FOV 84°, Vertical FOV 45°, Diagonal FOV 100°",
+          "6 mm": "Horizontal FOV 52°, Vertical FOV 28°, Diagonal FOV 61°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6",
+        "Depth_of_Field": {
+          "2.8 mm": "1.4 m to ∞",
+          "4 mm": "1.5 m to ∞",
+          "6 mm": "3.5 m to ∞"
+        }
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "25 fps (2688 × 1520, 1920 × 1080, 1280 × 720)",
+          "60_Hz": "30 fps (2688 × 1520, 1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Third_Stream": {
+          "50_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "Note": "Third stream is supported under certain settings"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265/H.264/H.264+/H.265+",
+          "Sub_Stream": "H.265/H.264/MJPEG",
+          "Third_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 8 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "SVC": "H.264 and H.265 encoding",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream and sub-stream",
+        "Target_Cropping": "Yes"
+      },
+      "Audio": {
+        "Audio_Compression": "-2U: G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC",
+        "Audio_Bit_Rate": "-2U: 64 Kbps (G.711ulaw/G.711alaw)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/8 to 320 Kbps (MP3)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "-2U: 8 kHz/16 kHz/32 kHz/48 kHz",
+        "Environment_Noise_Filtering": "-2U: Yes",
+        "Built_in_Microphone": "-2U: Arrayed dual-microphone"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP, SMTP, IGMP, 802.1X, QoS, IPv4, IPv6, UDP, Bonjour, SSL/TLS, PPPoE, SNMP, WebSocket, WebSockets",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ONVIF (Profile S, Profile G), ISAPI, SDK, ISUP",
+        "Security": "Password protection, complicated password, HTTPS encryption, IP address filter, Security Audit Log, basic and digest authentication for HTTP/HTTPS, TLS 1.1/1.2/1.3, WSSE and digest authentication for ONVIF",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200, Hik-Connect, Hik-Central",
+        "Network_Storage": "NAS (NFS, SMB/CIFS), ANR, Hikvision memory card support with encryption and health detection",
+        "Web_Browser": "Plug-in required live view: IE 11; Plug-in free live view: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+; Local service: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+"
+      },
+      "Image": {
+        "Image_Parameters_Switch": "Yes",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Settings": "Rotate mode",
+        "WDR": "120 dB",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "8 programmable polygon privacy masks"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.5 A, max. 6 W, reverse polarity protection, Ø5.5 mm coaxial power plug; PoE: IEEE 802.3af, Class 3, max. 7.5 W",
+        "Material": "Metal",
+        "Dimension": "Ø74.4 mm × 176.3 mm (Ø2.93\" × 6.94\")",
+        "Package_Dimension": "234 mm × 120 mm × 117 mm (9.21\" × 4.72\" × 4.61\")",
+        "Weight": "Approx. 515 g (1.1 lb.)",
+        "With_Package_Weight": "Approx. 760 g (1.7 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Language": "33 languages including English, Russian, French, Spanish, Korean, Japanese, Ukrainian, and more",
+        "General_Function": "Heartbeat, mirror, flash log, password reset via email, pixel counter, anti-banding"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "4 MP AcuSense Hybrid Bullet Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "4 MP high-quality imaging for sharp surveillance",
+      "AcuSense technology for accurate human and vehicle classification",
+      "Smart Hybrid Light with IR and white light, 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio monitoring",
+      "120 dB true WDR for clear imaging in strong backlight",
+      "H.265+ compression and IP67 water/dust resistance"
+    ]
+  },
+  {
+    "_id": "69eb13dc695f1fc9132f3e8f",
+    "slug": "DS-2CD2143G2-LI-S-2U",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "4 MP AcuSense Hybrid Dome Camera ",
+    "features": [
+      "4 MP high-quality imaging for sharp surveillance",
+      "AcuSense for precise human and vehicle classification",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in backlight",
+      "H.265+ compression, IP67 weatherproof, and IK10 vandal-resistant"
+    ],
+    "images": [
+      "/uploads/1777369690895-DS-2CD2143G2-LI(S)(2U).png"
+    ],
+    "name": "DS-2CD2143G2-LI(S)(2U)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.9\" Progressive Scan CMOS",
+        "Max_Resolution": "2688 × 1520",
+        "Min_Illumination": "Color: 0.005 Lux @ (F1.6, AGC ON), 0 Lux with light",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 355°, Tilt: 0° to 75°, Rotate: 0° to 355°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8 and 4 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 104°, Vertical FOV 57°, Diagonal FOV 122°",
+          "4 mm": "Horizontal FOV 84°, Vertical FOV 45°, Diagonal FOV 100°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6",
+        "Depth_of_Field": {
+          "2.8 mm": "1.4 m to ∞",
+          "4 mm": "1.5 m to ∞"
+        }
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "25 fps (2688 × 1520, 1920 × 1080, 1280 × 720)",
+          "60_Hz": "30 fps (2688 × 1520, 1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Third_Stream": {
+          "50_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "Note": "Third stream is supported under certain settings"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265/H.264/H.264+/H.265+",
+          "Sub_Stream": "H.265/H.264/MJPEG",
+          "Third_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 8 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "SVC": "H.264 and H.265 encoding",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream and sub-stream",
+        "Target_Cropping": "Yes"
+      },
+      "Audio": {
+        "Audio_Compression": "-2U: G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC",
+        "Audio_Bit_Rate": "-2U: 64 Kbps (G.711ulaw/G.711alaw)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/8 to 320 Kbps (MP3)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "-2U: 8 kHz/16 kHz/32 kHz/48 kHz",
+        "Environment_Noise_Filtering": "-2U: Yes"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP, SMTP, IGMP, 802.1X, QoS, IPv4, IPv6, UDP, Bonjour, SSL/TLS, PPPoE, SNMP, WebSocket, WebSockets",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ONVIF (Profile S, Profile G), ISAPI, SDK, ISUP",
+        "Security": "Password protection, complicated password, HTTPS encryption, IP address filter, Security Audit Log, basic and digest authentication for HTTP/HTTPS, TLS 1.1/1.2/1.3, WSSE and digest authentication for ONVIF",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200, Hik-Connect, Hik-Central",
+        "Network_Storage": "NAS (NFS, SMB/CIFS), ANR, Hikvision memory card support with encryption and health detection",
+        "Web_Browser": "Plug-in required live view: IE 11; Plug-in free live view: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+; Local service: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+"
+      },
+      "Image": {
+        "Image_Parameters_Switch": "Yes",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Settings": "Rotate mode",
+        "WDR": "120 dB",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "8 programmable polygon privacy masks"
+      },
+      "Deep_Learning_Function": {
+        "Perimeter_Protection": "Line crossing, intrusion. Support alarm triggering by specified target types (human and vehicle)"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.6 A, max. 7.2 W, Ø5.5 mm coaxial power plug, reverse polarity protection; PoE: IEEE 802.3af, Class 3, max. 8.5 W",
+        "Material": "Base: aluminum alloy, cover: aluminum alloy",
+        "Dimension": "Ø121.5 mm × 97.6 mm (Ø4.78\" × 3.84\")",
+        "Package_Dimension": "150 mm × 150 mm × 141 mm (5.91\" × 5.91\" × 5.55\")",
+        "Weight": "Approx. 600 g (1.3 lb.)",
+        "With_Package_Weight": "Approx. 830 g (1.8 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Language": "33 languages: English, Russian, Estonian, Bulgarian, Hungarian, Greek, German, Italian, Czech, Slovak, French, Polish, Dutch, Portuguese, Spanish, Romanian, Danish, Swedish, Norwegian, Finnish, Croatian, Slovenian, Serbian, Turkish, Korean, Traditional Chinese, Thai, Vietnamese, Japanese, Latvian, Lithuanian, Portuguese (Brazil), Ukrainian",
+        "General_Function": "Heartbeat, mirror, flash log, password reset via email, pixel counter, anti-banding"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "4 MP AcuSense Hybrid Dome Camera ",
+    "isFeatured": true,
+    "keyFeatures": [
+      "4 MP high-quality imaging for sharp surveillance",
+      "AcuSense for precise human and vehicle classification",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in backlight",
+      "H.265+ compression, IP67 weatherproof, and IK10 vandal-resistant"
+    ]
+  },
+  {
+    "_id": "69eb13dc695f1fc9132f3e90",
+    "slug": "DS-2CD2063G2-LI-2U",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "6 MP AcuSense Hybrid Bullet Camera",
+    "features": [
+      "6 MP high-quality imaging for detailed surveillance",
+      "AcuSense for accurate human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in strong backlight",
+      "H.265+ compression and IP67-rated weather resistance"
+    ],
+    "images": [
+      "/uploads/1777369731228-DS-2CD2063G2-LI(2U).png"
+    ],
+    "name": "DS-2CD2063G2-LI(2U)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.4\" Progressive Scan CMOS",
+        "Max_Resolution": "3200 × 1800",
+        "Min_Illumination": "Color: 0.005 Lux @ (F1.6, AGC ON), 0 Lux with light",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 360°, Tilt: 0° to 90°, Rotate: 0° to 360°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8, 4, and 6 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 105°, Vertical FOV 55°, Diagonal FOV 127°",
+          "4 mm": "Horizontal FOV 78°, Vertical FOV 38°, Diagonal FOV 96°",
+          "6 mm": "Horizontal FOV 51°, Vertical FOV 26°, Diagonal FOV 59°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6",
+        "Depth_of_Field": {
+          "2.8 mm": "1.8 m to ∞",
+          "4 mm": "3.1 m to ∞",
+          "6 mm": "6.4 m to ∞"
+        }
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "25 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)",
+          "60_Hz": "30 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Third_Stream": {
+          "50_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "Note": "Third stream is supported under certain settings"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265/H.264/H.264+/H.265+",
+          "Sub_Stream": "H.265/H.264/MJPEG",
+          "Third_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 16 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "SVC": "H.264 and H.265 encoding",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream and sub-stream",
+        "Target_Cropping": "Yes"
+      },
+      "Audio": {
+        "Audio_Compression": "-2U: G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC",
+        "Audio_Bit_Rate": "-2U: 64 Kbps (G.711ulaw/G.711alaw)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/8 to 320 Kbps (MP3)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "-2U: 8 kHz/16 kHz/32 kHz/48 kHz",
+        "Environment_Noise_Filtering": "-2U: Yes"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP, SMTP, IGMP, 802.1X, QoS, IPv4, IPv6, UDP, Bonjour, SSL/TLS, PPPoE, SNMP, WebSocket, WebSockets",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ONVIF (Profile S, Profile G), ISAPI, SDK, ISUP",
+        "Security": "Password protection, complicated password, HTTPS encryption, IP address filter, Security Audit Log, basic and digest authentication for HTTP/HTTPS, TLS 1.1/1.2/1.3, WSSE and digest authentication for ONVIF",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200, Hik-Connect, Hik-Central",
+        "Network_Storage": "NAS (NFS, SMB/CIFS), ANR, Hikvision memory card support with encryption and health detection",
+        "Web_Browser": "Plug-in required live view: IE 11; Plug-in free live view: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+; Local service: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+"
+      },
+      "Image": {
+        "Image_Parameters_Switch": "Yes",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Settings": "Rotate mode",
+        "WDR": "120 dB",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "8 programmable polygon privacy masks"
+      },
+      "Deep_Learning_Function": {
+        "Perimeter_Protection": "Line crossing, intrusion. Support alarm triggering by specified target types (human and vehicle)"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.5 A, max. 6 W, reverse polarity protection, Ø5.5 mm coaxial power plug; PoE: IEEE 802.3af, Class 3, max. 7.5 W",
+        "Material": "Metal",
+        "Dimension": "Ø74.4 mm × 176.3 mm (Ø2.93\" × 6.94\")",
+        "Package_Dimension": "234 mm × 120 mm × 117 mm (9.21\" × 4.72\" × 4.61\")",
+        "Weight": "Approx. 515 g (1.1 lb.)",
+        "With_Package_Weight": "Approx. 760 g (1.7 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Language": "33 languages: English, Russian, Estonian, Bulgarian, Hungarian, Greek, German, Italian, Czech, Slovak, French, Polish, Dutch, Portuguese, Spanish, Romanian, Danish, Swedish, Norwegian, Finnish, Croatian, Slovenian, Serbian, Turkish, Korean, Traditional Chinese, Thai, Vietnamese, Japanese, Latvian, Lithuanian, Portuguese (Brazil), Ukrainian",
+        "General_Function": "Heartbeat, mirror, flash log, password reset via email, pixel counter, anti-banding"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "6 MP AcuSense Hybrid Bullet Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "6 MP high-quality imaging for detailed surveillance",
+      "AcuSense for accurate human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in strong backlight",
+      "H.265+ compression and IP67-rated weather resistance"
+    ]
+  },
+  {
+    "_id": "69eb13dc695f1fc9132f3e91",
+    "slug": "DS-2CD2163G2-LI-S-2U",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "6 MP AcuSense Hybrid Dome Camera",
+    "features": [
+      "6 MP high-resolution imaging for detailed surveillance",
+      "AcuSense technology for accurate human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for real-time high-quality audio",
+      "120 dB true WDR for clear imaging in backlit environments",
+      "H.265+ compression, IP67 weatherproof, and IK10 vandal-resistant"
+    ],
+    "images": [
+      "/uploads/1777367244477-半球61-海康黑-反射补光-正面.png"
+    ],
+    "name": "DS-2CD2163G2-LI(S)(2U)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.4\" Progressive Scan CMOS",
+        "Max_Resolution": "3200 × 1800",
+        "Min_Illumination": "Color: 0.005 Lux @ (F1.6, AGC ON), 0 Lux with light",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 355°, Tilt: 0° to 75°, Rotate: 0° to 355°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8 and 4 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 105°, Vertical FOV 55°, Diagonal FOV 127°",
+          "4 mm": "Horizontal FOV 78°, Vertical FOV 38°, Diagonal FOV 96°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6",
+        "Depth_of_Field": {
+          "2.8 mm": "1.8 m to ∞",
+          "4 mm": "3.1 m to ∞"
+        }
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "25 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)",
+          "60_Hz": "30 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Third_Stream": {
+          "50_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "Note": "Third stream is supported under certain settings"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265/H.264/H.264+/H.265+",
+          "Sub_Stream": "H.265/H.264/MJPEG",
+          "Third_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 16 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "SVC": "H.264 and H.265 encoding",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream and sub-stream",
+        "Target_Cropping": "Yes"
+      },
+      "Audio": {
+        "Audio_Compression": "-2U: G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC",
+        "Audio_Bit_Rate": "-2U: 64 Kbps (G.711ulaw/G.711alaw)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/8 to 320 Kbps (MP3)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "-2U: 8 kHz/16 kHz/32 kHz/48 kHz",
+        "Environment_Noise_Filtering": "-2U: Yes"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP, SMTP, IGMP, 802.1X, QoS, IPv4, IPv6, UDP, Bonjour, SSL/TLS, PPPoE, SNMP, WebSocket, WebSockets",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ONVIF (Profile S, Profile G), ISAPI, SDK, ISUP",
+        "Security": "Password protection, complicated password, HTTPS encryption, IP address filter, Security Audit Log, basic and digest authentication for HTTP/HTTPS, TLS 1.1/1.2/1.3, WSSE and digest authentication for ONVIF",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200, Hik-Connect, Hik-Central",
+        "Network_Storage": "NAS (NFS, SMB/CIFS), ANR, Hikvision memory card support with encryption and health detection",
+        "Web_Browser": "Plug-in required live view: IE 11; Plug-in free live view: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+; Local service: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+"
+      },
+      "Image": {
+        "Image_Parameters_Switch": "Yes",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Settings": "Rotate mode",
+        "WDR": "120 dB",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "8 programmable polygon privacy masks"
+      },
+      "Deep_Learning_Function": {
+        "Perimeter_Protection": "Line crossing, intrusion. Support alarm triggering by specified target types (human and vehicle)"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.65 A, max. 7.8 W, reverse polarity protection, Ø5.5 mm coaxial power plug; PoE: IEEE 802.3af, Class 3, max. 9.5 W",
+        "Material": "Base: aluminum alloy, cover: aluminum alloy",
+        "Dimension": "Ø121.5 mm × 97.6 mm (Ø4.78\" × 3.84\")",
+        "Package_Dimension": "150 mm × 150 mm × 141 mm (5.91\" × 5.91\" × 5.55\")",
+        "Weight": "Approx. 600 g (1.3 lb.)",
+        "With_Package_Weight": "Approx. 840 g (1.9 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Language": "33 languages: English, Russian, Estonian, Bulgarian, Hungarian, Greek, German, Italian, Czech, Slovak, French, Polish, Dutch, Portuguese, Spanish, Romanian, Danish, Swedish, Norwegian, Finnish, Croatian, Slovenian, Serbian, Turkish, Korean, Traditional Chinese, Thai, Vietnamese, Japanese, Latvian, Lithuanian, Portuguese (Brazil), Ukrainian",
+        "General_Function": "Heartbeat, mirror, flash log, password reset via email, pixel counter, anti-banding"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "6 MP AcuSense Hybrid Dome Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "6 MP high-resolution imaging for detailed surveillance",
+      "AcuSense technology for accurate human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for real-time high-quality audio",
+      "120 dB true WDR for clear imaging in backlit environments",
+      "H.265+ compression, IP67 weatherproof, and IK10 vandal-resistant"
+    ]
+  },
+  {
+    "_id": "69eb13dc695f1fc9132f3e92",
+    "slug": "DS-2CD2083G2-LI-2U",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "8 MP AcuSense Hybrid Bullet Camera",
+    "features": [
+      "8 MP ultra HD imaging for detailed surveillance",
+      "AcuSense for precise human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in challenging lighting",
+      "H.265+ compression and IP67-rated weather protection"
+    ],
+    "images": [
+      "/uploads/1777367206367-DS-2CD2083G2-LI(2U).png"
+    ],
+    "name": "DS-2CD2083G2-LI(2U)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.8\" Progressive Scan CMOS",
+        "Max_Resolution": "3840 × 2160",
+        "Min_Illumination": "Color: 0.005 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 360°, Tilt: 0° to 90°, Rotate: 0° to 360°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8, 4, and 6 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 108°, Vertical FOV 59°, Diagonal FOV 127°",
+          "4 mm": "Horizontal FOV 88°, Vertical FOV 44°, Diagonal FOV 105°",
+          "6 mm": "Horizontal FOV 54°, Vertical FOV 29°, Diagonal FOV 63°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6",
+        "Depth_of_Field": {
+          "2.8 mm": "1.7 m to ∞",
+          "4 mm": "2.6 m to ∞",
+          "6 mm": "5.8 m to ∞"
+        }
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "20 fps (3840 × 2160), 25 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)",
+          "60_Hz": "20 fps (3840 × 2160), 30 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Third_Stream": {
+          "50_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "Note": "Third stream is supported under certain settings"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265/H.264/H.264+/H.265+",
+          "Sub_Stream": "H.265/H.264/MJPEG",
+          "Third_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 16 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "SVC": "H.264 and H.265 encoding",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream and sub-stream",
+        "Target_Cropping": "Yes"
+      },
+      "Audio": {
+        "Audio_Compression": "-2U: G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC",
+        "Audio_Bit_Rate": "-2U: 64 Kbps (G.711ulaw/G.711alaw)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/8 to 320 Kbps (MP3)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "-2U: 8 kHz/16 kHz/32 kHz/48 kHz",
+        "Environment_Noise_Filtering": "-2U: Yes"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP, SMTP, IGMP, 802.1X, QoS, IPv4, IPv6, UDP, Bonjour, SSL/TLS, PPPoE, SNMP, WebSocket, WebSockets",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ONVIF (Profile S, Profile G), ISAPI, SDK, ISUP",
+        "Security": "Password protection, complicated password, HTTPS encryption, IP address filter, Security Audit Log, basic and digest authentication for HTTP/HTTPS, TLS 1.1/1.2/1.3, WSSE and digest authentication for ONVIF",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200, Hik-Connect, Hik-Central",
+        "Network_Storage": "NAS (NFS, SMB/CIFS), ANR, Hikvision memory card support with encryption and health detection",
+        "Web_Browser": "Plug-in required live view: IE 11; Plug-in free live view: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+; Local service: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+"
+      },
+      "Image": {
+        "Image_Parameters_Switch": "Yes",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Settings": "Rotate mode",
+        "WDR": "120 dB",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "8 programmable polygon privacy masks"
+      },
+      "Deep_Learning_Function": {
+        "Perimeter_Protection": "Line crossing, intrusion, region entrance, region exiting. Support alarm triggering by specified target types (human and vehicle)"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.5 A, max. 6 W, reverse polarity protection, Ø5.5 mm coaxial power plug; PoE: IEEE 802.3af, Class 3, max. 7.5 W",
+        "Material": "Metal",
+        "Dimension": "Ø74.4 mm × 176.3 mm (Ø2.93\" × 6.94\")",
+        "Package_Dimension": "234 mm × 120 mm × 117 mm (9.21\" × 4.72\" × 4.61\")",
+        "Weight": "Approx. 515 g (1.1 lb.)",
+        "With_Package_Weight": "Approx. 760 g (1.7 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Language": "33 languages: English, Russian, Estonian, Bulgarian, Hungarian, Greek, German, Italian, Czech, Slovak, French, Polish, Dutch, Portuguese, Spanish, Romanian, Danish, Swedish, Norwegian, Finnish, Croatian, Slovenian, Serbian, Turkish, Korean, Traditional Chinese, Thai, Vietnamese, Japanese, Latvian, Lithuanian, Portuguese (Brazil), Ukrainian",
+        "General_Function": "Heartbeat, mirror, flash log, password reset via email, pixel counter, anti-banding"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "8 MP AcuSense Hybrid Bullet Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "8 MP ultra HD imaging for detailed surveillance",
+      "AcuSense for precise human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in challenging lighting",
+      "H.265+ compression and IP67-rated weather protection"
+    ]
+  },
+  {
+    "_id": "69eb1479695f1fc9132f3e96",
+    "slug": "DS-2CD2183G2-LI-S-2U",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "8 MP AcuSense Hybrid Dome Camera",
+    "features": [
+      "8 MP ultra HD imaging for precise surveillance",
+      "AcuSense for accurate human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Arrayed dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in harsh lighting",
+      "H.265+ compression, IP67 weatherproof, and IK10 vandal-resistant"
+    ],
+    "images": [
+      "/uploads/1777367146126-半球61-海康黑-反射补光-右侧.png"
+    ],
+    "name": "DS-2CD2183G2-LI(S)(2U)",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.8\" Progressive Scan CMOS",
+        "Max_Resolution": "3840 × 2160",
+        "Min_Illumination": "Color: 0.005 Lux @ (F1.6, AGC ON), 0 Lux with light",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 355°, Tilt: 0° to 75°, Rotate: 0° to 355°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8 and 4 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 108°, Vertical FOV 59°, Diagonal FOV 127°",
+          "4 mm": "Horizontal FOV 88°, Vertical FOV 44°, Diagonal FOV 105°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.6",
+        "Depth_of_Field": {
+          "2.8 mm": "1.7 m to ∞",
+          "4 mm": "2.6 m to ∞"
+        }
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "20 fps (3840 × 2160), 25 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)",
+          "60_Hz": "20 fps (3840 × 2160), 30 fps (3200 × 1800, 2688 × 1520, 1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "30 fps (1280 × 720, 640 × 480, 640 × 360)"
+        },
+        "Third_Stream": {
+          "50_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "60_Hz": "10 fps (1920 × 1080, 1280 × 720, 640 × 480, 640 × 360)",
+          "Note": "Third stream is supported under certain settings"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265/H.264/H.264+/H.265+",
+          "Sub_Stream": "H.265/H.264/MJPEG",
+          "Third_Stream": "H.265/H.264"
+        },
+        "Video_Bit_Rate": "32 Kbps to 16 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "SVC": "H.264 and H.265 encoding",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream and sub-stream",
+        "Target_Cropping": "Yes"
+      },
+      "Audio": {
+        "Audio_Compression": "-2U: G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC",
+        "Audio_Bit_Rate": "-2U: 64 Kbps (G.711ulaw/G.711alaw)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/8 to 320 Kbps (MP3)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "-2U: 8 kHz/16 kHz/32 kHz/48 kHz",
+        "Environment_Noise_Filtering": "-2U: Yes"
+      },
+      "Network": {
+        "Protocols": "TCP/IP, ICMP, HTTP, HTTPS, FTP, DHCP, DNS, DDNS, RTP, RTSP, RTCP, NTP, UPnP, SMTP, IGMP, 802.1X, QoS, IPv4, IPv6, UDP, Bonjour, SSL/TLS, PPPoE, SNMP, WebSocket, WebSockets",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "ONVIF (Profile S, Profile G), ISAPI, SDK, ISUP",
+        "Security": "Password protection, complicated password, HTTPS encryption, IP address filter, Security Audit Log, basic and digest authentication for HTTP/HTTPS, TLS 1.1/1.2/1.3, WSSE and digest authentication for ONVIF",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Client": "iVMS-4200, Hik-Connect, Hik-Central",
+        "Network_Storage": "NAS (NFS, SMB/CIFS), ANR, supports Hikvision memory card with encryption and health detection",
+        "Web_Browser": "Plug-in required live view: IE 11; Plug-in free live view: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+; Local service: Chrome 80+, Firefox 80+, Edge 89+, Safari 13+"
+      },
+      "Image": {
+        "Image_Parameters_Switch": "Yes",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "Image_Settings": "Rotate mode",
+        "WDR": "120 dB",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "8 programmable polygon privacy masks"
+      },
+      "Deep_Learning_Function": {
+        "Perimeter_Protection": "Line crossing, intrusion; Supports alarm triggering by human and vehicle detection"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.7 A, max. 8.4 W, Ø5.5 mm coaxial power plug, reverse polarity protection; PoE: IEEE 802.3af, Class 3, max. 10 W",
+        "Material": "Base: aluminum alloy, Cover: aluminum alloy",
+        "Dimension": "Ø121.5 mm × 97.6 mm (Ø4.78\" × 3.84\")",
+        "Package_Dimension": "150 mm × 150 mm × 141 mm (5.91\" × 5.91\" × 5.55\")",
+        "Weight": "Approx. 600 g (1.3 lb.)",
+        "With_Package_Weight": "Approx. 840 g (1.9 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F), Humidity 95% or less (non-condensing)",
+        "Language": "33 languages including English, Russian, German, French, Portuguese, Spanish, Chinese, Japanese, etc.",
+        "General_Function": "Heartbeat, mirror, flash log, password reset via email, pixel counter, anti-banding"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "8 MP AcuSense Hybrid Dome Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "8 MP ultra HD imaging for precise surveillance",
+      "AcuSense for accurate human and vehicle detection",
+      "Smart Hybrid Light with IR/white light and 4 lighting modes",
+      "Arrayed dual-microphone (-2U) for high-quality real-time audio",
+      "120 dB true WDR for clear imaging in harsh lighting",
+      "H.265+ compression, IP67 weatherproof, and IK10 vandal-resistant"
+    ]
+  },
+  {
+    "_id": "69eb1479695f1fc9132f3e97",
+    "slug": "DS-2CD1027G2H-LIU",
+    "__v": 0,
+    "category": "69eb0f27fb11a78a0e2f175a",
+    "description": "8 MP AcuSense Hybrid Dome Camera",
+    "features": [
+      "2 MP high-quality imaging with vivid color detail",
+      "Smart Hybrid Light for enhanced low-light visibility",
+      "Human and vehicle detection for accurate alerts",
+      "Built-in microphone for real-time audio monitoring",
+      "Supports up to 512 GB onboard storage (SD card optional)",
+      "H.265+ compression and IP67-rated weather protection"
+    ],
+    "images": [
+      "/uploads/1777367120637-DS-2CD10x7G2H-LIU(F)-筒机39-全彩双光-海康白-基线-左侧 (1).png"
+    ],
+    "name": "DS-2CD1027G2H-LIU",
+    "rating": 5,
+    "reviewCount": 100,
+    "specifications": {
+      "Camera": {
+        "Image_Sensor": "1/2.8\" Progressive Scan CMOS",
+        "Max_Resolution": "1920 × 1080",
+        "Min_Illumination": "Color: 0.001 Lux @ (F1.0, AGC ON),0 Lux with light",
+        "Shutter_Time": "1/3 s to 1/100,000 s",
+        "Day_Night": "IR cut filter",
+        "Angle_Adjustment": "Pan: 0° to 360°, Tilt: 0° to 90°, Rotate: 0° to 360°"
+      },
+      "Lens": {
+        "Lens_Type": "Fixed focal lens, 2.8 and 4 mm optional",
+        "Focal_Length_FOV": {
+          "2.8 mm": "Horizontal FOV 115°, Vertical FOV 60°, Diagonal FOV 143°",
+          "4 mm": "Horizontal FOV 94°, Vertical FOV 50°, Diagonal FOV 110°"
+        },
+        "Lens_Mount": "M12",
+        "Iris_Type": "Fixed",
+        "Aperture": "F1.0"
+      },
+      "Video": {
+        "Main_Stream": {
+          "50_Hz": "25 fps (1920 × 1080, 1280 × 720)",
+          "60_Hz": "30 fps (1920 × 1080, 1280 × 720)"
+        },
+        "Sub_Stream": {
+          "50_Hz": "25 fps (640 × 480, 640 × 360)",
+          "60_Hz": "24 fps (640 × 480, 640 × 360)"
+        },
+        "Video_Compression": {
+          "Main_Stream": "H.265+/H.265/H.264+/H.264",
+          "Sub_Stream": "H.265/H.264/MJPEG"
+        },
+        "Video_Bit_Rate": "32 Kbps to 16 Mbps",
+        "H264_Type": "Baseline Profile, Main Profile, High Profile",
+        "H265_Type": "Main Profile",
+        "Bit_Rate_Control": "CBR, VBR",
+        "ROI": "1 fixed region for main stream"
+      },
+      "Audio": {
+        "Audio_Type": "Mono sound",
+        "Audio_Compression": "G.711/G.722.1/G.726/MP2L2/PCM/AAC-LC",
+        "Audio_Bit_Rate": "64 Kbps (G.711)/16 Kbps (G.722.1)/16 Kbps (G.726)/32 to 160 Kbps (MP2L2)/16 to 64 Kbps (AAC-LC)",
+        "Audio_Sampling_Rate": "8 kHz/16 kHz",
+        "Environment_Noise_Filtering": "Yes"
+      },
+      "Network": {
+        "Protocols": "IPv4, IPv6, TCP/IP, ICMP, DHCP, DNS, HTTP, RTP, RTSP, RTCP, NTP, IGMP, UDP, QoS, FTP, SMTP, UPnP",
+        "Simultaneous_Live_View": "Up to 6 channels",
+        "API": "Open Network Video Interface (Profile S, Profile T, Profile G (only -F model supports)), ISAPI, SDK",
+        "User_Host": "Up to 32 users; 3 user levels: administrator, operator, and user",
+        "Security": "Password protection, complicated password, watermark, basic and digest authentication for HTTP, WSSE and digest authentication for Open Network Video Interface, security audit log, host authentication (MAC address)",
+        "Client": "iVMS-4200, Hik-Connect",
+        "Web_Browser": "Plug-in required live view: IE 10, IE 11, Local service: Chrome 57.0+, Firefox 52.0+, Edge 89+"
+      },
+      "Image": {
+        "Image_Settings": "Rotate mode, saturation, brightness, contrast, sharpness, gain, white balance, adjustable by client software or web browser",
+        "Day_Night_Switch": "Day, Night, Auto, Schedule",
+        "WDR": "Digital WDR",
+        "SNR": "≥ 52 dB",
+        "Image_Enhancement": "BLC, HLC, 3D DNR",
+        "Privacy_Mask": "4 programmable polygon privacy masks"
+      },
+      "General": {
+        "Power": "12 VDC ± 25%, 0.45 A, max. 5.4 W, Ø5.5 mm coaxial power plug, reverse polarity protection, PoE: IEEE 802.3af, Class 3, max. 6.5 W",
+        "Material": "Front cover: metal, body: plastic, bracket: plastic",
+        "Dimension": "69.8 mm × 67.9 mm × 172.9 mm (2.7\" × 2.7\" × 6.8\")",
+        "Package_Dimension": "150 mm × 150 mm × 141 mm (5.91\" × 5.91\" × 5.55\")",
+        "Weight": "Approx. 550 g (1.2 lb.)",
+        "With_Package_Weight": "Approx. 800 g (1.8 lb.)",
+        "Storage_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F). Humidity 95% or less (non-condensing)",
+        "Startup_and_Operating_Conditions": "-30 °C to 60 °C (-22 °F to 140 °F). Humidity 95% or less (non-condensing)",
+        "Language": "English, Ukrainian",
+        "General_Function": "Heartbeat, anti-banding, mirror, password protection, password reset via email"
+      }
+    },
+    "subCategory": "69eb0f27fb11a78a0e2f175e",
+    "subTitle": "8 MP AcuSense Hybrid Dome Camera",
+    "isFeatured": true,
+    "keyFeatures": [
+      "2 MP high-quality imaging with vivid color detail",
+      "Smart Hybrid Light for enhanced low-light visibility",
+      "Human and vehicle detection for accurate alerts",
+      "Built-in microphone for real-time audio monitoring",
+      "Supports up to 512 GB onboard storage (SD card optional)",
+      "H.265+ compression and IP67-rated weather protection"
+    ]
+  }
+]
