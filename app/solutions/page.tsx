@@ -88,23 +88,25 @@ const industrySolutions = [
 
 export default function SolutionsPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#050505] pt-24">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-maroon">
+    <main className="min-h-screen bg-white dark:bg-maroon pt-24">
+      {/* Premium Solutions Hero */}
+      <section className="relative pt-32 pb-24 overflow-hidden bg-maroon">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/40 to-transparent"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[100px]" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-black/20 to-transparent" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/20 border border-gold/30 text-gold text-xs font-black uppercase tracking-widest mb-6">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/20 border border-gold/30 text-gold text-[10px] font-black uppercase tracking-[0.3em] mb-8">
               <ShieldCheck size={14} />
-              Enterprise Solutions
+              Enterprise Solutions Portfolio
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
-              Tailored <span className="text-gold">Security</span> <br />
-              For Every Industry.
+            <h1 className="text-5xl md:text-8xl font-black text-white tracking-tight mb-8 leading-[0.85] uppercase">
+              Tailored <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">Security</span> <br />
+              For Every <span className="text-white/40">Industry.</span>
             </h1>
-            <p className="text-xl text-white/70 leading-relaxed max-w-xl font-medium">
+            <p className="text-xl text-white/60 leading-relaxed max-w-2xl font-medium border-l-4 border-gold pl-8">
               Hikvision UAE provides state-of-the-art intelligent solutions optimized for the specific challenges of various sectors across Dubai, Abu Dhabi, and the Northern Emirates.
             </p>
           </div>
@@ -193,7 +195,7 @@ export default function SolutionsPage() {
                   { title: "Efficiency", desc: "Optimize operations and reduce costs.", icon: Zap },
                   { title: "Proven Trust", desc: "Trusted by UAE's top corporations.", icon: CheckCircle2 }
                 ].map((item) => (
-                  <div key={item.title} className="flex gap-4 p-4 rounded-2xl bg-white dark:bg-[#050505] shadow-sm border border-gray-100 dark:border-white/5">
+                  <div key={item.title} className="flex gap-4 p-4 rounded-2xl bg-white dark:bg-maroon shadow-sm border border-gray-100 dark:border-white/5">
                     <div className="w-10 h-10 rounded-lg bg-maroon/5 flex items-center justify-center text-maroon shrink-0">
                       <item.icon size={20} />
                     </div>

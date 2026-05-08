@@ -6,16 +6,16 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#050505] pt-24">
+    <main className="min-h-screen bg-white dark:bg-maroon pt-24">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-[#0a0a0a]">
+      <section className="relative py-20 md:py-32 overflow-hidden bg-maroon">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-maroon/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
-              Securing the <span className="text-maroon">UAE</span> <br />
+              Securing the <span className="text-gold">UAE</span> <br />
               With <span className="text-gold">Intelligence.</span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed font-medium mb-12">
@@ -26,7 +26,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white dark:bg-[#050505] border-b border-gray-100 dark:border-white/5">
+      <section className="py-20 bg-white dark:bg-maroon border-b border-gray-100 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
             {[

@@ -79,7 +79,7 @@ export default function AdminNewsletterPage() {
         <div className="flex items-center gap-3">
           <button 
             onClick={exportCSV}
-            className="flex items-center gap-2 px-6 py-3.5 bg-gray-900 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-maroon transition-all"
+            className="flex items-center gap-2 px-6 py-3.5 bg-maroon text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-maroon transition-all"
           >
             <Download size={16} /> Export CSV
           </button>

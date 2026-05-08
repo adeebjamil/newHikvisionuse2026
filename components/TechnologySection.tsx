@@ -46,7 +46,7 @@ const technologies = [
 
 export default function TechnologySection() {
   return (
-    <section className="py-24 bg-[#fcfcfc] dark:bg-[#050505] overflow-hidden">
+    <section className="py-24 bg-[#fcfcfc] dark:bg-maroon overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-maroon font-black uppercase tracking-[0.4em] text-xs mb-4">Innovation & Excellence</h2>

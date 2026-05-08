@@ -42,7 +42,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-gray-50 pt-32 pb-20">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="relative rounded-[60px] overflow-hidden bg-gray-900 py-24 px-8 md:px-20 flex flex-col items-center text-center">
+        <div className="relative rounded-[60px] overflow-hidden bg-maroon py-24 px-8 md:px-20 flex flex-col items-center text-center">
           <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] scale-150" />
           </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                       <button 
                         type="submit"
                         disabled={loading}
-                        className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-12 py-5 bg-maroon text-white rounded-full font-black uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl shadow-maroon/20 active:scale-95 disabled:opacity-50"
+                        className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-12 py-5 bg-maroon text-white rounded-full font-black uppercase tracking-widest hover:bg-maroon transition-all shadow-xl shadow-maroon/20 active:scale-95 disabled:opacity-50"
                       >
                         {loading ? 'Sending...' : (
                           <>

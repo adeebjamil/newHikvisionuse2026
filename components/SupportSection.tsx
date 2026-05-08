@@ -29,7 +29,7 @@ export default function SupportSection() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-[#050505] relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-maroon relative overflow-hidden">
       {/* Abstract Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-maroon rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3" />

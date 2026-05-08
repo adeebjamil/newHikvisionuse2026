@@ -52,7 +52,7 @@ export default function ScrollToTop() {
         </div>
         
         {/* Tooltip */}
-        <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-gray-900 text-white text-[10px] font-black uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
+        <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-maroon text-white text-[10px] font-black uppercase tracking-widest rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
             Back to Top
         </div>
       </button>

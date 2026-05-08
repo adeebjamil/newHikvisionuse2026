@@ -26,7 +26,7 @@ export default function SecurityOverview() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-black relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-maroon relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-maroon/5 -skew-x-12 translate-x-1/4 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />

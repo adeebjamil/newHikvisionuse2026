@@ -16,7 +16,6 @@ export default function Navbar() {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // Fetch catalog data
     const fetchCatalog = async () => {
       try {
         const res = await fetch('/api/nav-products');
@@ -33,6 +32,18 @@ export default function Navbar() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
 
   return (
     <header className={`w-full fixed top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
@@ -186,7 +197,7 @@ export default function Navbar() {
                 </Link>
 
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible translate-y-4 group-hover/tech:opacity-100 group-hover/tech:visible group-hover/tech:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]">
-                  <div className="bg-white rounded-[32px] shadow-[0_30px_100px_rgba(0,0,0,0.2)] border border-gray-100 p-0 w-[850px] overflow-hidden flex h-[480px]">
+                  <div className="bg-white rounded-[32px] shadow-[0_30px_100px_rgba(0,0,0,0.2)] border border-gray-100 p-0 w-[90vw] max-w-[850px] overflow-hidden flex h-[480px]">
                     {/* Left: Featured Technology */}
                     <div className="w-[45%] relative group/img overflow-hidden border-r border-gray-50">
                       <img 
@@ -311,7 +322,7 @@ export default function Navbar() {
                 </Link>
 
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible translate-y-4 group-hover/sol:opacity-100 group-hover/sol:visible group-hover/sol:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]">
-                  <div className="bg-white rounded-[32px] shadow-[0_30px_100px_rgba(0,0,0,0.2)] border border-gray-100 p-6 w-[1000px] overflow-hidden relative">
+                  <div className="bg-white rounded-[32px] shadow-[0_30px_100px_rgba(0,0,0,0.2)] border border-gray-100 p-6 w-[95vw] max-w-[1000px] overflow-hidden relative">
                     <div className="flex items-center justify-between mb-6 px-2">
                        <div className="space-y-1">
                           <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight">Industry <span className="text-maroon">Solutions</span></h3>
@@ -423,26 +434,55 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu panel */}
-        <div className={`md:hidden fixed inset-0 top-[88px] bg-white z-40 transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="px-6 py-8 space-y-4 overflow-y-auto h-full pb-32">
-            {[
-              { name: 'Home', href: '/' },
-              { name: 'Products', href: '/products' },
-              { name: 'Technologies', href: '/technologies' },
-              { name: 'Solutions', href: '/solutions' },
-              { name: 'About Us', href: '/about' },
-              { name: 'Contact Us', href: '/contact' },
-            ].map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-between p-4 rounded-xl bg-gray-50 text-lg font-bold text-gray-900 active:bg-maroon active:text-white transition-all"
-              >
-                {link.name}
-                <ChevronRight size={20} />
-              </Link>
-            ))}
+        <div className={`md:hidden fixed inset-0 ${scrolled ? 'top-24' : 'top-28'} bg-white z-40 transition-all duration-500 ease-in-out ${open ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
+          <div className={`flex flex-col h-full transform transition-transform duration-500 ${open ? 'translate-y-0' : '-translate-y-10'}`}>
+            <div className="px-6 py-8 space-y-2 overflow-y-auto h-full pb-32">
+              <div className="mb-8 p-6 bg-maroon rounded-3xl text-white">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gold mb-2">Need Assistance?</p>
+                <p className="text-sm font-medium mb-4 opacity-80">Our experts are available 24/7 for technical support.</p>
+                <a href="tel:+971509693134" className="inline-flex items-center gap-2 text-lg font-black text-white">
+                  <Phone size={18} className="text-gold" />
+                  +971 50 969 3134
+                </a>
+              </div>
+
+              {[
+                { name: 'Home', href: '/', icon: Building2 },
+                { name: 'Products', href: '/products', icon: ShieldCheck },
+                { name: 'Technologies', href: '/technologies', icon: MapPin },
+                { name: 'Solutions', href: '/solutions', icon: Store },
+                { name: 'About Us', href: '/about', icon: ShieldCheck },
+                { name: 'Contact Us', href: '/contact', icon: Mail },
+              ].map((link) => (
+                <Link 
+                  key={link.name} 
+                  href={link.href} 
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-between p-5 rounded-2xl bg-gray-50 hover:bg-maroon hover:text-white transition-all group"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-maroon group-hover:bg-white/10 group-hover:text-white transition-all shadow-sm">
+                      <link.icon size={20} />
+                    </div>
+                    <span className="text-lg font-black uppercase tracking-tight">{link.name}</span>
+                  </div>
+                  <ChevronRight size={20} className="text-gold group-hover:translate-x-1 transition-transform" />
+                </Link>
+              ))}
+            </div>
+            
+            {/* Mobile Menu Footer */}
+            <div className="mt-auto p-6 border-t border-gray-100 bg-gray-50 flex items-center justify-between">
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center">
+                   <Phone size={14} className="text-maroon" />
+                </div>
+                <div className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center">
+                   <Mail size={14} className="text-maroon" />
+                </div>
+              </div>
+              <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Hikvision UAE Official</span>
+            </div>
           </div>
         </div>
       </nav>

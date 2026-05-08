@@ -28,7 +28,7 @@ export default function Preloader() {
   if (!isLoading) return null;
 
   return (
-    <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] ${progress === 100 ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
+    <div className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-maroon transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] ${progress === 100 ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
       
       {/* Background Decorative Elements - Stronger Brand Colors */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

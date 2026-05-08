@@ -39,7 +39,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] dark:bg-zinc-950 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-[#f8f9fa] dark:bg-maroon flex items-center justify-center p-4 relative overflow-hidden">
       {/* Abstract Background Elements */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-maroon/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gold/5 rounded-full blur-[120px]" />

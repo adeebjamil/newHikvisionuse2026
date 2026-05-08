@@ -87,7 +87,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[700px] w-full overflow-hidden bg-black">
+    <section className="relative h-screen min-h-[700px] w-full overflow-hidden bg-maroon">
       {/* Slides */}
       {posters.map((poster, index) => (
         <div 
@@ -115,26 +115,26 @@ export default function HeroSlider() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
           
           {/* Content */}
-          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pt-24 sm:pt-32">
+          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pt-24 sm:pt-32 lg:pt-24">
             <div className={`max-w-3xl text-white transition-all duration-700 delay-300 ${index === current ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-xs font-bold uppercase tracking-widest mb-6 ${poster.accent === 'gold' ? 'bg-gold/20 border-gold/30 text-gold' : 'bg-maroon/20 border-maroon/30 text-maroon'}`}>
+              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 ${poster.accent === 'gold' ? 'bg-gold/20 border-gold/30 text-gold' : 'bg-maroon/20 border-maroon/30 text-maroon'}`}>
                 <Shield size={16} />
                 <span>{poster.tag}</span>
               </div>
               
-              <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-4 leading-[0.9]">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-4 leading-[0.95] sm:leading-[0.9]">
                 {poster.title} <br />
                 <span className={poster.accent === 'gold' ? 'text-gold' : 'text-maroon'}>{poster.subtitle}</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-xl opacity-90">
+              <p className="text-base md:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed max-w-xl opacity-90">
                 {poster.desc}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-5">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
                 <Link 
                   href="/products" 
-                  className={`inline-flex justify-center items-center gap-3 px-10 py-5 rounded-full text-lg font-bold transition-all shadow-2xl ${
+                  className={`inline-flex justify-center items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold transition-all shadow-2xl ${
                     poster.accent === 'gold' 
                       ? 'bg-gold text-maroon hover:bg-white' 
                       : 'bg-maroon text-white hover:bg-gold hover:text-maroon'
@@ -145,7 +145,7 @@ export default function HeroSlider() {
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="inline-flex justify-center items-center gap-3 px-10 py-5 rounded-full text-lg font-bold border-2 border-white/20 backdrop-blur-xl text-white hover:bg-white/10 transition-all"
+                  className="inline-flex justify-center items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold border-2 border-white/20 backdrop-blur-xl text-white hover:bg-white/10 transition-all"
                 >
                   {poster.cta2}
                   <PhoneCall size={20} />
@@ -156,26 +156,26 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-12 right-12 z-30 flex items-center gap-4">
+      {/* Navigation Controls - Responsive positioning */}
+      <div className="absolute bottom-12 right-6 sm:right-12 z-30 flex items-center gap-2 sm:gap-4">
         <button 
           onClick={prevSlide}
-          className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-md"
+          className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-md"
           aria-label="Previous slide"
         >
-          <ChevronLeft size={24} />
+          <ChevronLeft size={20} />
         </button>
         <button 
           onClick={nextSlide}
-          className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-md"
+          className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-md"
           aria-label="Next slide"
         >
-          <ChevronRight size={24} />
+          <ChevronRight size={20} />
         </button>
       </div>
 
-      {/* Indicators */}
-      <div className="absolute bottom-12 left-12 z-30 flex gap-3">
+      {/* Indicators - Hidden on extra small devices to avoid clutter */}
+      <div className="absolute bottom-12 left-6 sm:left-12 z-30 hidden sm:flex gap-3">
         {posters.map((_, i) => (
           <button
             key={i}

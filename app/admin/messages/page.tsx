@@ -162,7 +162,7 @@ export default function AdminMessagesPage() {
                    {!msg.isRead && (
                      <button 
                        onClick={() => updateStatus(msg._id, 'isRead', true)}
-                       className="w-full py-3 bg-gray-900 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-maroon transition-all"
+                       className="w-full py-3 bg-maroon text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-maroon transition-all"
                      >
                         Mark Read
                      </button>

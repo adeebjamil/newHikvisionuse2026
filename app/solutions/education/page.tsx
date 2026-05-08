@@ -28,9 +28,13 @@ export default function EducationSolutionPage() {
                 <button className="px-10 py-5 bg-maroon text-white rounded-full font-black uppercase tracking-widest hover:bg-gold hover:text-maroon transition-all shadow-xl shadow-maroon/20 active:scale-95">
                    Explore Features
                 </button>
-                <button className="px-10 py-5 bg-gray-50 text-gray-900 border border-gray-100 rounded-full font-black uppercase tracking-widest hover:bg-white hover:border-maroon transition-all active:scale-95">
-                   Download Brochure
-                </button>
+                <a 
+                  href="/Download%20Pdf.pdf" 
+                  download 
+                  className="px-10 py-5 bg-gray-50 text-gray-900 border border-gray-100 rounded-full font-black uppercase tracking-widest hover:bg-white hover:border-maroon transition-all active:scale-95 inline-block"
+                >
+                  Download Brochure
+                </a>
               </div>
            </div>
         </div>
@@ -42,7 +46,7 @@ export default function EducationSolutionPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                <div className="relative">
                   <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
-                     <img src="https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover" alt="Campus" />
+                     <img src="/Solutions/Education.png" className="w-full h-full object-cover" alt="Campus Security" />
                   </div>
                   <div className="absolute -right-8 top-1/2 -translate-y-1/2 space-y-4 hidden md:block">
                      {[

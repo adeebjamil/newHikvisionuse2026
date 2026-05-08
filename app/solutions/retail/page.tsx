@@ -11,7 +11,7 @@ export default function RetailSolutionPage() {
         <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent z-10" />
            <img 
-             src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2000&auto=format&fit=crop" 
+             src="/Solutions/Retail.png" 
              className="w-full h-full object-cover"
              alt="Retail Security"
            />
@@ -80,7 +80,7 @@ export default function RetailSolutionPage() {
                  title: "Integrated Security Solution",
                  desc: "Implement comprehensive security with integrated cameras, access control, POS integration, and remote monitoring capabilities.",
                  icon: <LayoutGrid size={32} />,
-                 color: "bg-gray-900"
+                 color: "bg-maroon"
                }
              ].map((feat, i) => (
                <div key={i} className="group bg-white p-10 rounded-[40px] border border-gray-100 shadow-xl shadow-gray-200/40 hover:shadow-maroon/10 transition-all duration-500 relative overflow-hidden">
@@ -98,7 +98,7 @@ export default function RetailSolutionPage() {
           </div>
 
           {/* Business Insights Section */}
-          <div className="relative rounded-[60px] overflow-hidden bg-gray-900 p-12 md:p-24">
+          <div className="relative rounded-[60px] overflow-hidden bg-maroon p-12 md:p-24">
              <div className="absolute inset-0 opacity-30">
                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2000&auto=format&fit=crop" className="w-full h-full object-cover" alt="Analytics" />
              </div>
@@ -107,9 +107,9 @@ export default function RetailSolutionPage() {
                    <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tight mb-8">
                      Data Driven <br /> <span className="text-gold">Operations</span>
                    </h2>
-                   <p className="text-gray-400 text-lg font-medium leading-relaxed mb-12">
-                     Beyond security, our retail solutions provide actionable business intelligence. Understand your customers better with advanced footfall analysis and heatmapping.
-                   </p>
+                    <p className="text-white/70 text-lg font-medium leading-relaxed mb-12">
+                      Beyond security, our retail solutions provide actionable business intelligence. Understand your customers better with advanced footfall analysis and heatmapping.
+                    </p>
                    <div className="space-y-6">
                       {["Heat Mapping", "People Counting", "Queue Management", "Store Traffic Analysis"].map((item, idx) => (
                         <div key={idx} className="flex items-center gap-4 text-white">

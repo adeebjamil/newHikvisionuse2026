@@ -103,7 +103,7 @@ export default function AdminDashboard() {
           </div>
           <button 
             onClick={fetchDashboardData}
-            className="px-8 py-4 bg-maroon text-white rounded-3xl font-black text-sm shadow-xl shadow-maroon/20 hover:bg-gray-900 transition-all flex items-center gap-3 active:scale-95"
+            className="px-8 py-4 bg-maroon text-white rounded-3xl font-black text-sm shadow-xl shadow-maroon/20 hover:bg-maroon transition-all flex items-center gap-3 active:scale-95"
           >
             <RefreshCw size={18} />
             <span>Update Metrics</span>

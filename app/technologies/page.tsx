@@ -45,51 +45,61 @@ const technologies = [
 export default function TechnologiesPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-50 -z-10 rounded-bl-[200px]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Premium Technologies Hero */}
+      <section className="relative pt-32 pb-24 overflow-hidden bg-maroon">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[100px]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-maroon/5 border border-maroon/10 text-maroon font-black text-xs uppercase tracking-[0.2em]">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/20 border border-gold/30 text-gold font-black text-xs uppercase tracking-[0.2em]">
                 <ShieldCheck size={14} />
                 <span>Next-Gen Security Standards</span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-black text-gray-900 leading-none tracking-tight">
-                THE FUTURE OF <span className="text-maroon">INTELLIGENCE</span>
+              <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.85] tracking-tight">
+                THE FUTURE OF <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">INTELLIGENCE</span>
               </h1>
-              <p className="text-xl text-gray-600 font-medium leading-relaxed max-w-lg">
+              <p className="text-xl text-white/60 font-medium leading-relaxed max-w-lg">
                 Explore the groundbreaking core technologies that power the world's most advanced surveillance systems. From AI-driven detection to vivid color night vision.
               </p>
               <div className="flex items-center gap-4">
-                <button className="bg-maroon text-white px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-xl shadow-maroon/20 hover:bg-gray-900 transition-all active:scale-95">
+                <a 
+                  href="/Download%20Pdf.pdf" 
+                  download 
+                  className="bg-white text-maroon px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-gold transition-all active:scale-95 shadow-2xl inline-block"
+                >
                   Download Catalog
-                </button>
+                </a>
                 <div className="flex -space-x-3">
                    {[1,2,3,4].map(i => (
-                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
+                     <div key={i} className="w-10 h-10 rounded-full border-2 border-maroon bg-gray-200 overflow-hidden">
                         <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
                      </div>
                    ))}
-                   <div className="w-10 h-10 rounded-full border-2 border-white bg-maroon flex items-center justify-center text-white text-[10px] font-bold">
+                   <div className="w-10 h-10 rounded-full border-2 border-maroon bg-gold flex items-center justify-center text-maroon text-[10px] font-black">
                       +1k
                    </div>
                 </div>
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Trusted by Experts</span>
+                <span className="text-xs font-black text-white/40 uppercase tracking-widest">Trusted by Experts</span>
               </div>
             </div>
+            
             <div className="relative group">
-              <div className="absolute inset-0 bg-maroon/10 rounded-[60px] blur-3xl transform rotate-6 transition-transform group-hover:rotate-12 duration-1000" />
-              <div className="relative bg-white rounded-[60px] p-4 shadow-2xl border border-gray-100 overflow-hidden">
+              <div className="absolute inset-0 bg-gold/10 rounded-[60px] blur-3xl transform rotate-6 transition-transform group-hover:rotate-12 duration-1000" />
+              <div className="relative bg-white/5 backdrop-blur-md rounded-[60px] p-6 border border-white/10 overflow-hidden">
                  <img 
                    src="/Technologies/Core Tech.png" 
                    alt="Core Tech" 
-                   className="w-full h-auto object-cover rounded-[50px] transition-transform duration-[2s] group-hover:scale-110" 
+                   className="w-full h-auto object-cover rounded-[50px] transition-transform duration-[2s] group-hover:scale-110 drop-shadow-2xl" 
                  />
-                 <div className="absolute inset-0 bg-gradient-to-t from-maroon/40 to-transparent" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-maroon/80 to-transparent" />
                  <div className="absolute bottom-10 left-10 text-white">
-                    <p className="text-4xl font-black uppercase tracking-tight">Core <span className="text-gold">Tech</span></p>
-                    <p className="text-xs font-black uppercase tracking-[0.3em] opacity-80">Empowering Security</p>
+                    <p className="text-5xl font-black uppercase tracking-tight leading-none mb-2">Core <span className="text-gold">Tech</span></p>
+                    <div className="flex items-center gap-3">
+                       <div className="h-px w-8 bg-gold" />
+                       <p className="text-xs font-black uppercase tracking-[0.3em] text-gold/80">Empowering Security</p>
+                    </div>
                  </div>
               </div>
             </div>
@@ -224,7 +234,7 @@ export default function TechnologiesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link 
               href="/contact" 
-              className="px-12 py-5 bg-maroon text-white rounded-full font-black uppercase tracking-widest text-sm shadow-2xl shadow-maroon/20 hover:bg-gray-900 transition-all flex items-center gap-3 active:scale-95"
+              className="px-12 py-5 bg-maroon text-white rounded-full font-black uppercase tracking-widest text-sm shadow-2xl shadow-maroon/20 hover:bg-maroon transition-all flex items-center gap-3 active:scale-95"
             >
               Contact Sales Team
               <ArrowRight size={18} />

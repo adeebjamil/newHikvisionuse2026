@@ -24,26 +24,29 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gray-50 pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="relative rounded-[40px] overflow-hidden bg-gray-900 h-[280px] flex items-center p-8 sm:p-16 group">
-          <div className="absolute top-0 right-0 w-1/2 h-full opacity-20">
-             <div className="absolute inset-0 bg-gradient-to-l from-maroon/50 to-transparent z-10" />
-             <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop" alt="" className="w-full h-full object-cover grayscale brightness-50" />
+    <main className="min-h-screen bg-gray-50 pb-20">
+      {/* Professional Catalog Hero */}
+      <section className="relative pt-32 pb-24 overflow-hidden bg-maroon mb-16">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[100px]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="h-px w-12 bg-gold" />
+            <span className="text-gold font-black uppercase tracking-[0.3em] text-xs">Hikvision UAE Official</span>
           </div>
           
-          <div className="relative z-20 max-w-2xl">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-[2px] w-12 bg-gold" />
-              <span className="text-gold font-black uppercase tracking-[0.3em] text-xs">Hikvision UAE</span>
-            </div>
-            <h1 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tight mb-4">
-              Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">Catalog</span>
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tight mb-8 leading-[0.85]">
+              Professional <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">Catalog.</span>
             </h1>
-            <p className="text-gray-400 text-xs font-bold uppercase tracking-widest max-w-lg">Official Enterprise Security Solutions</p>
+            <p className="text-white/60 text-lg font-medium leading-relaxed max-w-2xl uppercase tracking-widest text-xs">
+              Explore the region's most comprehensive collection of official Hikvision security solutions, engineered for excellence in the UAE.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {loading ? (

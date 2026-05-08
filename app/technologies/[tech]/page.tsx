@@ -12,7 +12,7 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
       subtitle: "Authorized Hikvision Partner in Dubai & Across UAE",
       description1: "Discover next-generation security with Hikvision TandemVu Cameras in UAE, designed to deliver unmatched surveillance performance for Dubai, Abu Dhabi, Sharjah, and the entire UAE. As a trusted Hikvision partner in Dubai, we provide cutting-edge dual-lens security systems that combine thermal imaging and visible-light technology in one powerful solution.",
       description2: "Whether you need security for commercial buildings, industrial zones, smart cities, or residential communities, our TandemVu solutions in UAE are engineered to meet the region’s demanding environmental and security standards.",
-      heroImg: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop",
+      heroImg: "/Technologies/TandemVu.png",
       whyChooseTitle: "Why Choose Hikvision TandemVu in UAE?",
       whyChooseText: "TandemVu technology integrates AI-powered analytics, thermal detection, and high-resolution imaging, making it ideal for 24/7 surveillance in UAE conditions. Built specifically for Gulf climates, these systems ensure reliable monitoring even in extreme heat, dust, and low-visibility environments.",
       features: [
@@ -69,7 +69,7 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
       subtitle: "Authorized Hikvision Partner in Dubai & Across UAE",
       description1: "Upgrade your surveillance with Hikvision AcuSense Cameras in UAE, designed with advanced AI-powered human and vehicle detection to deliver accurate, reliable, and intelligent security. Perfectly suited for Dubai, Abu Dhabi, Sharjah, and across the UAE, AcuSense minimizes false alarms while maximizing protection for residential, commercial, and industrial properties.",
       description2: "Whether you're securing villas, offices, warehouses, or public infrastructure, AcuSense offers next-generation CCTV solutions tailored for UAE environments.",
-      heroImg: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2000&auto=format&fit=crop", 
+      heroImg: "/Technologies/AcuSense.png", 
       whyChooseTitle: "Why Choose Hikvision AcuSense in UAE?",
       whyChooseText: "AcuSense technology leverages deep learning AI algorithms to distinguish between humans, vehicles, and irrelevant motion, making it one of the most efficient smart surveillance systems in UAE. Built to perform in harsh Gulf conditions, it ensures accurate monitoring, reduced alerts, and enhanced operational efficiency.",
       features: [
@@ -121,12 +121,12 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
       locations: "Serving: Dubai | Abu Dhabi | Sharjah | Ajman | Ras Al Khaimah | Fujairah | Umm Al Quwain"
     },
     darkfighter: {
-      layoutType: 'alternate',
+      layoutType: 'default',
       metaTitle: "Hikvision DarkFighter UAE – Advanced Night Vision",
       subtitle: "Official Hikvision Distributor in Dubai & Across UAE",
       description1: "Experience superior night surveillance with Hikvision DarkFighter Cameras in UAE, designed to deliver full-color imaging even in near-total darkness. As a trusted Hikvision distributor in Dubai, we provide cutting-edge low-light CCTV solutions for Dubai, Abu Dhabi, Sharjah, and across the UAE.",
       description2: "Whether you need security for commercial properties, industrial sites, residential communities, or government infrastructure, DarkFighter ensures clear, detailed monitoring 24/7, even in the most challenging lighting conditions.",
-      heroImg: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop", 
+      heroImg: "/Technologies/DarkFighter.png", 
       whyChooseTitle: "Why Choose Hikvision DarkFighter in UAE?",
       whyChooseText: "DarkFighter technology uses ultra-low-light sensors and AI enhancements to capture vivid color images at night, making it one of the most powerful night vision CCTV solutions in UAE. Built for Gulf environments, it ensures reliable performance in dust, humidity, and extreme temperatures.",
       features: [
@@ -178,12 +178,12 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
       locations: "Serving: Dubai | Abu Dhabi | Sharjah | Ajman | Ras Al Khaimah | Fujairah | Umm Al Quwain"
     },
     colorvu: {
-      layoutType: 'vibrant',
+      layoutType: 'default',
       metaTitle: "Hikvision ColorVu UAE – 24/7 Full-Color Security Cameras",
       subtitle: "Official Hikvision ColorVu Partner in Dubai & Across UAE",
       description1: "Enhance your surveillance with Hikvision ColorVu Cameras in UAE, delivering true full-color video 24/7—even in complete darkness. As a trusted Hikvision partner in Dubai, we provide advanced color night vision CCTV solutions tailored for Dubai, Abu Dhabi, Sharjah, and across the UAE.",
       description2: "Whether securing residential villas, commercial properties, retail outlets, or smart city infrastructure, ColorVu ensures clear, detailed footage with accurate color reproduction at all times.",
-      heroImg: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2000&auto=format&fit=crop", 
+      heroImg: "/Technologies/ColorVu.png", 
       whyChooseTitle: "Why Choose Hikvision ColorVu in UAE?",
       whyChooseText: "Hikvision ColorVu technology uses advanced sensors, large aperture lenses, and smart lighting to deliver bright, full-color images day and night. Built specifically for UAE environments, it guarantees consistent performance in extreme heat, strong sunlight, and low-light conditions.",
       features: [
@@ -278,40 +278,48 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
           </div>
         </div>
 
-        {/* Center Aligned Hero with Wide Image Below */}
-        <section className="bg-brand-light py-20 relative overflow-hidden">
+        {/* Premium DarkFighter Hero */}
+        <section className="relative pt-32 pb-24 overflow-hidden bg-maroon">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
           <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-30" />
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white shadow-sm border border-gray-100 text-maroon font-black text-xs uppercase tracking-[0.2em] mb-8">
-              <Eye size={14} className="text-gold" />
-              <span>{techData.subtitle}</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.05] mb-8 tracking-tight">
-              {techData.metaTitle}
-            </h1>
-            
-            <div className="text-lg md:text-xl text-gray-600 font-medium space-y-6 mb-12 max-w-3xl mx-auto">
-              <p>{techData.description1}</p>
-              <p>{techData.description2}</p>
-            </div>
-          </div>
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative mt-8">
-            <div className="rounded-[40px] overflow-hidden shadow-2xl border border-gray-200 relative group h-[400px] md:h-[600px] bg-white flex items-center justify-center">
-              {/* Note: NO BLACK BACKGROUND. Using white with a glowing border instead */}
-              <div className="absolute inset-0 bg-gradient-to-t from-maroon/80 via-transparent to-transparent opacity-60 z-10" />
-              <img src={techData.heroImg} alt="DarkFighter Hero" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out" />
-              
-              <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 z-20 flex flex-col md:flex-row items-end justify-between gap-6">
-                <div className="max-w-xl">
-                  <h3 className="text-white font-black text-2xl md:text-3xl mb-2">{techData.whyChooseTitle}</h3>
-                  <p className="text-white/90 font-medium">{techData.whyChooseText}</p>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/20 border border-gold/30 text-gold font-black text-xs uppercase tracking-[0.2em] mb-8">
+                  <Eye size={14} />
+                  <span>{techData.subtitle}</span>
                 </div>
-                <button className="shrink-0 bg-gold text-maroon px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition-all shadow-lg active:scale-95 flex items-center gap-2">
+                
+                <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.05] mb-8 tracking-tight uppercase">
+                  {techData.metaTitle.includes(' – ') ? techData.metaTitle.split(' – ')[0] : techData.metaTitle} <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">
+                    {techData.metaTitle.includes(' – ') ? techData.metaTitle.split(' – ')[1] : ''}
+                  </span>
+                </h1>
+                
+                <div className="text-lg text-white/60 font-medium space-y-6 mb-12 max-w-xl border-l-4 border-gold pl-8">
+                  <p>{techData.description1}</p>
+                  <p>{techData.description2}</p>
+                </div>
+
+                <button className="bg-gold text-maroon px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-2xl active:scale-95 flex items-center gap-3">
                   <span>Discover More</span>
                   <ArrowRight size={16} />
                 </button>
+              </div>
+
+              <div className="relative group">
+                <div className="absolute -inset-10 bg-gold/10 rounded-full blur-[120px] animate-pulse" />
+                <div className="relative rounded-[40px] overflow-hidden shadow-2xl border border-white/10 group h-[500px] bg-white/5 backdrop-blur-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-maroon/90 via-transparent to-transparent z-10" />
+                  <img src={techData.heroImg} alt="Technology Hero" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s] ease-out opacity-80" />
+                  
+                  <div className="absolute bottom-0 left-0 w-full p-10 z-20">
+                    <h3 className="text-white font-black text-2xl mb-4 uppercase tracking-tight">{techData.whyChooseTitle}</h3>
+                    <p className="text-white/60 font-medium text-sm leading-relaxed">{techData.whyChooseText}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -330,7 +338,7 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
                     {/* Visual Side */}
                     <div className="w-full lg:w-1/2">
                       <div className="aspect-[4/3] rounded-[40px] bg-brand-light border border-gray-100 flex items-center justify-center relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop')] bg-cover opacity-5 mix-blend-overlay group-hover:scale-110 transition-transform duration-1000" />
+                        <div className="absolute inset-0 bg-[url('/Technologies/TandemVu.png')] bg-cover opacity-5 mix-blend-overlay group-hover:scale-110 transition-transform duration-1000" />
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gold/10 rounded-full blur-3xl group-hover:bg-gold/20 transition-all duration-700" />
                         <div className="relative z-10 w-24 h-24 rounded-full bg-white shadow-xl flex items-center justify-center border-4 border-brand-light text-maroon group-hover:scale-110 transition-transform duration-500">
                           <Icon size={40} strokeWidth={1.5} />
@@ -376,7 +384,7 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
 
         {/* Alternate CTA: Full width banner */}
         <section className="bg-maroon py-24 relative overflow-hidden border-t-[8px] border-gold">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop')] bg-cover opacity-10 mix-blend-overlay object-cover" />
+          <div className="absolute inset-0 bg-[url('/Technologies/DarkFighter.png')] bg-cover opacity-10 mix-blend-overlay object-cover" />
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold/20 rounded-full blur-[100px] mix-blend-screen" />
           
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -421,34 +429,44 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
           </div>
         </div>
 
-        {/* Hero Section: Glass Card with Floating Image */}
-        <section className="bg-white py-12 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-brand-light rounded-[40px] shadow-sm border border-gray-100 p-8 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center gap-16">
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-gold/30 via-transparent to-transparent rounded-full blur-3xl" />
-              <div className="w-full lg:w-1/2 relative z-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-gray-100 text-maroon font-black text-xs uppercase tracking-[0.2em] mb-6">
-                  <Sun size={14} className="text-gold" />
+        {/* Premium ColorVu Hero */}
+        <section className="relative pt-32 pb-24 overflow-hidden bg-maroon">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[100px]" />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/20 border border-gold/30 text-gold font-black text-xs uppercase tracking-[0.2em] mb-6">
+                  <Sun size={14} />
                   <span>{techData.subtitle}</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tight">
-                  {techData.metaTitle}
+                <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.9] mb-8 tracking-tight uppercase">
+                   {techData.metaTitle.includes(' – ') ? techData.metaTitle.split(' – ')[0] : techData.metaTitle} <br />
+                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">
+                    {techData.metaTitle.includes(' – ') ? techData.metaTitle.split(' – ')[1] : ''}
+                   </span>
                 </h1>
-                <p className="text-lg text-gray-600 font-medium mb-6">
+                <p className="text-xl text-white/60 font-medium mb-12 max-w-xl leading-relaxed border-l-4 border-gold pl-8">
                   {techData.description1}
                 </p>
-                <p className="text-lg text-gray-600 font-medium mb-10 pl-6 border-l-4 border-gold">
-                  {techData.description2}
-                </p>
-                <button className="bg-gradient-to-r from-maroon to-[#4a0000] text-white px-10 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:shadow-2xl hover:shadow-maroon/20 transition-all active:scale-95 inline-flex items-center gap-3">
-                  <span>Explore Now</span>
-                  <ArrowRight size={16} className="text-gold" />
-                </button>
+                
+                <div className="flex items-center gap-6">
+                  <button className="bg-white text-maroon px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-gold transition-all active:scale-95 shadow-2xl flex items-center gap-3">
+                    <span>Explore Technology</span>
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
               </div>
-              <div className="w-full lg:w-1/2 relative z-10">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gold/20 rounded-[40px] blur-3xl group-hover:bg-gold/40 transition-all duration-700" />
-                  <img src={techData.heroImg} alt="ColorVu Hero" className="w-full h-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-[1.5s]" />
+
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gold/10 rounded-[60px] blur-[100px] animate-pulse" />
+                <div className="relative bg-white/5 backdrop-blur-xl rounded-[60px] p-8 border border-white/10 overflow-hidden shadow-2xl">
+                   <img 
+                     src={techData.heroImg} 
+                     alt="ColorVu Technology" 
+                     className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(255,215,0,0.3)] transition-transform duration-[2s] group-hover:scale-110" 
+                   />
                 </div>
               </div>
             </div>
@@ -526,7 +544,7 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
         <section className="bg-white py-12 relative z-20 -mb-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-maroon via-[#5a0000] to-maroon rounded-[40px] p-12 lg:p-20 text-center relative overflow-hidden shadow-[0_20px_50px_rgba(107,0,0,0.3)]">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2000&auto=format&fit=crop')] bg-cover opacity-10 mix-blend-overlay object-cover" />
+              <div className="absolute inset-0 bg-[url('/Technologies/ColorVu.png')] bg-cover opacity-10 mix-blend-overlay object-cover" />
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gold/10 blur-[100px] mix-blend-screen" />
               
               <div className="relative z-10 max-w-4xl mx-auto">
@@ -574,39 +592,48 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-light/60 rounded-l-[120px] -z-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Premium Tech Hero */}
+      <section className="relative pt-32 pb-24 overflow-hidden bg-maroon">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[100px]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 text-gold font-bold text-xs uppercase tracking-widest mb-6 border border-gold/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/20 border border-gold/30 text-gold font-bold text-xs uppercase tracking-widest mb-8">
                 <Zap size={14} />
                 <span>{techData.subtitle}</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight">
-                {techData.metaTitle}
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight uppercase">
+                {techData.metaTitle.includes(' – ') ? techData.metaTitle.split(' – ')[0] : techData.metaTitle} <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-gold">
+                  {techData.metaTitle.includes(' – ') ? techData.metaTitle.split(' – ')[1] : ''}
+                </span>
               </h1>
-              <div className="space-y-6 text-lg text-gray-600 font-medium border-l-4 border-maroon pl-6 mb-10">
+              <div className="space-y-6 text-lg text-white/60 font-medium border-l-4 border-gold pl-6 mb-12">
                 <p className="leading-relaxed">{techData.description1}</p>
                 <p className="leading-relaxed">{techData.description2}</p>
               </div>
               <div className="flex flex-wrap items-center gap-4">
-                <button className="bg-maroon text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-gold hover:text-maroon transition-all shadow-lg hover:shadow-xl active:scale-95">
+                <button className="bg-white text-maroon px-8 py-4 rounded-full font-black text-xs uppercase tracking-widest hover:bg-gold transition-all shadow-xl active:scale-95">
                   Request A Quote
                 </button>
-                <button className="bg-white text-maroon border-2 border-maroon/20 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:border-maroon transition-all active:scale-95">
-                  Download Specs
-                </button>
+                <a 
+                  href="/Download%20Pdf.pdf" 
+                  download 
+                  className="bg-white/5 backdrop-blur-md text-white border border-white/10 px-8 py-4 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white/10 transition-all active:scale-95 inline-block"
+                >
+                  Download Pdf
+                </a>
               </div>
             </div>
             
             <div className="lg:col-span-5 relative group mt-10 lg:mt-0">
-              <div className="absolute inset-0 bg-gold/20 rounded-[40px] blur-3xl group-hover:bg-gold/30 transition-all duration-700 -z-10" />
-              <div className="bg-white rounded-[40px] p-4 shadow-2xl border border-gray-100 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-maroon to-gold" />
-                <div className="relative h-[450px] rounded-[30px] overflow-hidden bg-brand-light flex items-center justify-center p-8">
-                  <img src={techData.heroImg} alt="Hikvision Technology" className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-2xl" />
+              <div className="absolute inset-0 bg-gold/20 rounded-[40px] blur-3xl group-hover:bg-gold/30 transition-all duration-700" />
+              <div className="bg-white/5 backdrop-blur-xl rounded-[40px] p-6 border border-white/10 relative overflow-hidden shadow-2xl">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-white/20 via-gold to-white/20" />
+                <div className="relative h-[400px] rounded-[30px] overflow-hidden bg-white/5 flex items-center justify-center p-8">
+                  <img src={techData.heroImg} alt="Technology Visual" className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700 drop-shadow-[0_20px_50px_rgba(255,215,0,0.2)]" />
                 </div>
               </div>
             </div>

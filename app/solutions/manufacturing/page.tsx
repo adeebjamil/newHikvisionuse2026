@@ -7,7 +7,7 @@ export default function ManufacturingSolutionPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gray-900 overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-maroon overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
             src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop" 
@@ -20,7 +20,7 @@ export default function ManufacturingSolutionPage() {
             <div className="h-px w-12 bg-gold" />
             <span className="text-gold font-black uppercase tracking-[0.3em] text-xs">Industry Solutions</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tight mb-6">
             Manufacturing <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gold">Security</span>
           </h1>
           <p className="text-gray-400 text-xl font-bold uppercase tracking-widest max-w-2xl mb-10 leading-relaxed">
@@ -30,9 +30,13 @@ export default function ManufacturingSolutionPage() {
             <button className="px-10 py-5 bg-maroon text-white rounded-full font-black uppercase tracking-widest hover:bg-gold hover:text-maroon transition-all shadow-xl active:scale-95">
               Explore Features
             </button>
-            <button className="px-10 py-5 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-maroon transition-all active:scale-95">
+            <a 
+              href="/Download%20Pdf.pdf" 
+              download 
+              className="px-10 py-5 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-maroon transition-all active:scale-95 inline-block"
+            >
               Download PDF
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -63,9 +67,9 @@ export default function ManufacturingSolutionPage() {
             <div className="relative">
               <div className="aspect-square rounded-[40px] overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1565173553180-681e1ddb2eaf?q=80&w=2000&auto=format&fit=crop" 
+                  src="/Solutions/Manufacturing.png" 
                   className="w-full h-full object-cover"
-                  alt="Industrial Security"
+                  alt="Manufacturing Security"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-maroon p-10 rounded-[32px] shadow-2xl hidden md:block">
@@ -78,24 +82,27 @@ export default function ManufacturingSolutionPage() {
           {/* Solutions Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             {[
-              {
-                title: "Thermal Imaging Cameras",
-                desc: "24/7 temperature monitoring and early fire detection for industrial safety and asset protection.",
-                icon: <Flame size={32} />,
-                img: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=800"
-              },
-              {
-                title: "PTZ Surveillance Systems",
-                desc: "Pan-Tilt-Zoom cameras for 360° coverage, advanced zoom, and auto-tracking for perimeter security.",
-                icon: <Settings size={32} />,
-                img: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800"
-              },
-              {
-                title: "AI-Powered Smart Cameras",
-                desc: "Deep learning cameras for intelligent monitoring, PPE compliance, and advanced analytics.",
-                icon: <Cpu size={32} />,
-                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800"
-              }
+    {
+      title: "Thermal Imaging Cameras",
+      desc: "24/7 temperature monitoring and early fire detection for industrial safety and asset protection.",
+      icon: <Flame size={32} />,
+      img: "/poster1.png",
+      slug: "thermal-imaging-cameras"
+    },
+    {
+      title: "PTZ Surveillance Systems",
+      desc: "Pan-Tilt-Zoom cameras for 360° coverage, advanced zoom, and auto-tracking for perimeter security.",
+      icon: <Settings size={32} />,
+      img: "/poster2.png",
+      slug: "ptz-surveillance-systems"
+    },
+    {
+      title: "AI-Powered Smart Cameras",
+      desc: "Deep learning cameras for intelligent monitoring, PPE compliance, and advanced analytics.",
+      icon: <Cpu size={32} />,
+      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800",
+      slug: "ai-powered-smart-cameras"
+    }
             ].map((sol, i) => (
               <div key={i} className="group bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
                 <div className="h-64 relative overflow-hidden">
@@ -106,16 +113,16 @@ export default function ManufacturingSolutionPage() {
                   <div className="text-maroon mb-4">{sol.icon}</div>
                   <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tight mb-4">{sol.title}</h3>
                   <p className="text-gray-500 font-medium mb-8 leading-relaxed">{sol.desc}</p>
-                  <button className="flex items-center gap-2 text-maroon font-black uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                  <Link href={`/solutions/${sol.slug}`} className="flex items-center gap-2 text-maroon font-black uppercase tracking-widest text-xs hover:gap-4 transition-all">
                     Learn More <ArrowRight size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Features Grid */}
-          <div className="bg-gray-900 rounded-[60px] p-12 md:p-24 overflow-hidden relative">
+          <div className="bg-maroon rounded-[60px] p-12 md:p-24 overflow-hidden relative">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gold/10 to-transparent" />
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-16">
