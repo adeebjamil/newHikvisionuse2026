@@ -404,20 +404,19 @@ export default function ProductsCatchAllPage({ params }: { params: Promise<{ slu
       description: product.description,
       image: product.images?.[0] ? [product.images[0]] : [],
       brand: { "@type": "Brand", name: "Hikvision" },
-      offers: {
-        "@type": "Offer",
-        availability: "https://schema.org/InStock",
-        priceCurrency: "AED",
-        seller: { "@type": "Organization", name: "Hikvision UAE" },
-        url: productUrl,
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: product.rating ?? 5,
-        reviewCount: product.reviewCount ?? 1,
-        bestRating: 5,
-      },
       category: data.category?.name ?? "",
+      manufacturer: {
+        "@type": "Organization",
+        name: "Hikvision",
+        url: "https://www.hikvision.com",
+      },
+      distributor: {
+        "@type": "Organization",
+        name: "Hikvision UAE",
+        url: "https://hikvisionuae.ae",
+        telephone: "+971509693134",
+        email: "sales@hikvisionuae.ae",
+      },
     };
 
     const breadcrumbSchema = {
