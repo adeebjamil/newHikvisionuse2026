@@ -1,9 +1,95 @@
 import Link from 'next/link';
 import { ChevronRight, Building2, Store, HeartPulse, GraduationCap, ArrowRight, ShieldCheck, Target, Globe, Flame, Settings, Cpu } from 'lucide-react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+const SITE_URL = "https://hikvisionuae.ae";
+
+const solutionMeta: Record<string, { title: string; description: string; faqs: { q: string; a: string }[] }> = {
+  manufacturing: {
+    title: "Manufacturing Security Solutions UAE — Industrial CCTV Dubai",
+    description: "Hikvision UAE provides advanced manufacturing security systems in Dubai & UAE. Thermal inspection, PPE detection, access control & perimeter monitoring for factories and industrial facilities.",
+    faqs: [
+      { q: "What security solutions are best for manufacturing facilities in Dubai?", a: "Hikvision UAE recommends thermal cameras for equipment monitoring, AcuSense AI cameras for perimeter security, and integrated access control systems for manufacturing facilities in Dubai and UAE industrial zones." },
+      { q: "Does Hikvision UAE provide CCTV for warehouses in Dubai?", a: "Yes. We install complete warehouse surveillance systems including network cameras, NVR recording, and remote monitoring. Our systems are deployed across major warehouses in Dubai Investment Park, Jebel Ali, and ICAD." },
+    ],
+  },
+  retail: {
+    title: "Retail Security Solutions UAE — Smart CCTV for Shops Dubai",
+    description: "Hikvision UAE's retail security solutions: heat mapping, queue management, people counting & loss prevention for Dubai malls, supermarkets & stores. AI-powered business intelligence for UAE retail.",
+    faqs: [
+      { q: "How can Hikvision cameras help my retail business in Dubai?", a: "Hikvision retail solutions provide heat mapping to understand customer flow, queue management to improve service, people counting for staffing decisions, and loss prevention through AI facial recognition and behavior analysis." },
+      { q: "What is the best CCTV system for a shop in UAE?", a: "For UAE retail shops, we recommend ColorVu cameras for clear 24/7 footage, AcuSense for intelligent alerts, and an NVR with remote access. Hikvision UAE provides full installation and configuration for shops of all sizes." },
+    ],
+  },
+  healthcare: {
+    title: "Healthcare Security Solutions UAE — Hospital CCTV Dubai",
+    description: "Hikvision UAE delivers hospital & clinic security in Dubai: patient monitoring, restricted area access control, pharmacy security & emergency response systems across UAE healthcare facilities.",
+    faqs: [
+      { q: "What CCTV systems are used in hospitals in Dubai?", a: "Dubai hospitals use Hikvision network cameras for patient monitoring, access control terminals for restricted zones like ICUs and pharmacies, and video intercoms for secure entry. Hikvision UAE installs and maintains these systems across UAE healthcare facilities." },
+    ],
+  },
+  education: {
+    title: "Education Security Solutions UAE — Campus CCTV Dubai",
+    description: "Secure UAE schools and universities with Hikvision UAE's education security solutions: campus surveillance, visitor management, vehicle access control & emergency alarm systems in Dubai & Abu Dhabi.",
+    faqs: [
+      { q: "How do I secure a school in Dubai with CCTV?", a: "Hikvision UAE recommends a layered approach for Dubai schools: perimeter cameras with AI detection, access control at all entry points, panic alarm integration, and a central monitoring system. We design and install complete campus security systems." },
+    ],
+  },
+  government: {
+    title: "Government & Public Safety Solutions UAE — Smart City CCTV Dubai",
+    description: "Hikvision UAE provides government-grade surveillance: city cameras, traffic management, critical infrastructure protection & data center security for UAE government projects in Dubai & Abu Dhabi.",
+    faqs: [
+      { q: "Does Hikvision UAE supply cameras for government projects?", a: "Yes. Hikvision UAE is the official authorized distributor and has supplied and installed surveillance systems for government buildings, public spaces, and smart city infrastructure across all UAE emirates." },
+    ],
+  },
+  residential: {
+    title: "Residential Security Solutions UAE — Home CCTV Dubai",
+    description: "Protect your UAE home or villa with Hikvision UAE residential security: IP cameras, video intercom, smart locks & mobile remote access. Official Hikvision distributor serving Dubai, Abu Dhabi & all Emirates.",
+    faqs: [
+      { q: "What is the best home security camera system in Dubai?", a: "For Dubai homes and villas, we recommend Hikvision ColorVu cameras for 24/7 color footage, video intercom for gate control, and smart NVR with mobile app access (Hik-Connect). Hikvision UAE provides free site surveys for residential projects." },
+    ],
+  },
+  logistics: {
+    title: "Logistics & Warehouse Security UAE — CCTV for Ports Dubai",
+    description: "Hikvision UAE logistics security: LPR cameras, dock management, fleet monitoring & perimeter protection for warehouses, ports & logistics hubs in Dubai, Jebel Ali & all UAE emirates.",
+    faqs: [
+      { q: "How are logistics companies in Dubai using CCTV?", a: "Dubai logistics companies use Hikvision LPR cameras for vehicle tracking, dome cameras for warehouse monitoring, PTZ cameras for port surveillance, and integrated access control for secure dock management. Hikvision UAE deploys these systems across Jebel Ali and DIP." },
+    ],
+  },
+  hospitality: {
+    title: "Hotel & Hospitality Security UAE — CCTV for Hotels Dubai",
+    description: "Hikvision UAE hospitality security solutions: guest safety cameras, smart parking, pool surveillance & face recognition check-in for hotels, resorts & restaurants in Dubai & Abu Dhabi.",
+    faqs: [
+      { q: "What CCTV systems do Dubai hotels use?", a: "Dubai 5-star hotels use Hikvision IP cameras in lobbies, corridors, and parking; facial recognition for VIP guest identification; video intercom for suite entry; and PTZ cameras for large event areas. Hikvision UAE is the preferred supplier for UAE hospitality projects." },
+    ],
+  },
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ solution: string }> }): Promise<Metadata> {
+  const { solution } = await params;
+  const meta = solutionMeta[solution] ?? {
+    title: `${solution.charAt(0).toUpperCase() + solution.slice(1)} Security Solutions UAE — Hikvision Dubai`,
+    description: `Hikvision UAE delivers tailored ${solution} security solutions in Dubai and across all UAE emirates. Official authorized distributor.`,
+    faqs: [],
+  };
+  return {
+    title: meta.title,
+    description: meta.description,
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `${SITE_URL}/solutions/${solution}`,
+    },
+    alternates: { canonical: `${SITE_URL}/solutions/${solution}` },
+  };
+}
 
 export default async function SolutionSubPage({ params }: { params: Promise<{ solution: string }> }) {
   const resolvedParams = await params;
+  const pageMeta = solutionMeta[resolvedParams.solution];
+
+
   
   // High-quality Unsplash images for solutions
   const solutionsData: Record<string, any> = {
@@ -302,6 +388,49 @@ export default async function SolutionSubPage({ params }: { params: Promise<{ so
            </Link>
         </div>
       </section>
+
+      {/* FAQ Section — AEO/GEO */}
+      {pageMeta?.faqs?.length > 0 && (
+        <>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: pageMeta.faqs.map(({ q, a }) => ({
+              "@type": "Question",
+              name: q,
+              acceptedAnswer: { "@type": "Answer", text: a },
+            })),
+          })}} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+              { "@type": "ListItem", position: 2, name: "Solutions", item: `${SITE_URL}/solutions` },
+              { "@type": "ListItem", position: 3, name: solutionData.name, item: `${SITE_URL}/solutions/${resolvedParams.solution}` },
+            ],
+          })}} />
+          <section className="py-20 bg-gray-50 border-t border-gray-100">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-14">
+                <p className="text-[10px] font-black text-maroon uppercase tracking-[0.4em] mb-4">Common Questions</p>
+                <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tight">
+                  FAQ — <span className="text-maroon">{solutionData.name}</span>
+                </h2>
+                <div className="w-20 h-1 bg-gold mx-auto rounded-full mt-6" />
+              </div>
+              <div className="space-y-6">
+                {pageMeta.faqs.map(({ q, a }: { q: string; a: string }, i: number) => (
+                  <div key={i} className="bg-white rounded-[24px] p-8 border border-gray-100 hover:border-maroon/20 transition-all duration-300 shadow-sm">
+                    <h3 className="text-lg font-black text-gray-900 mb-3 uppercase tracking-tight">{q}</h3>
+                    <p className="text-gray-600 font-medium leading-relaxed text-sm">{a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
     </div>
   );
 }

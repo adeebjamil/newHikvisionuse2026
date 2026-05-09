@@ -394,8 +394,50 @@ export default function ProductsCatchAllPage({ params }: { params: Promise<{ slu
   // PRODUCT DETAIL VIEW
   if (data.type === 'product') {
     const { product } = data;
+    const SITE_URL = "https://hikvisionuae.ae";
+    const productUrl = `${SITE_URL}/products/${slug[0]}/${slug[1]}/${product.slug}`;
+
+    const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description: product.description,
+      image: product.images?.[0] ? [product.images[0]] : [],
+      brand: { "@type": "Brand", name: "Hikvision" },
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "AED",
+        seller: { "@type": "Organization", name: "Hikvision UAE" },
+        url: productUrl,
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: product.rating ?? 5,
+        reviewCount: product.reviewCount ?? 1,
+        bestRating: 5,
+      },
+      category: data.category?.name ?? "",
+    };
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Products", item: `${SITE_URL}/products` },
+        { "@type": "ListItem", position: 3, name: data.category?.name ?? slug[0], item: `${SITE_URL}/products/${slug[0]}` },
+        { "@type": "ListItem", position: 4, name: data.sub?.name ?? slug[1], item: `${SITE_URL}/products/${slug[0]}/${slug[1]}` },
+        { "@type": "ListItem", position: 5, name: product.name, item: productUrl },
+      ],
+    };
+
     return (
       <main className="min-h-screen bg-white pb-20 relative">
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
         {/* Enquiry Modal */}
         {showEnquiryModal && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
@@ -612,9 +654,9 @@ export default function ProductsCatchAllPage({ params }: { params: Promise<{ slu
                   </div>
                 </div>
                 
-                <h1 className="text-2xl sm:text-4xl font-black text-gray-900 uppercase tracking-tight mb-4 leading-tight">
+                <h2 className="text-2xl sm:text-4xl font-black text-gray-900 uppercase tracking-tight mb-4 leading-tight">
                   {product.name}
-                </h1>
+                </h2>
                 <p className="text-xl font-bold text-maroon uppercase tracking-tight mb-6">
                   {product.subTitle}
                 </p>

@@ -1,8 +1,80 @@
 import Link from 'next/link';
 import { ChevronRight, ShieldCheck, Sun, Cpu, Wrench, Eye, MapPin, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
+import type { Metadata } from 'next';
+
+const SITE_URL = "https://hikvisionuae.ae";
+
+const techMeta: Record<string, { title: string; description: string; keywords: string[] }> = {
+  tandemvu: {
+    title: "Hikvision TandemVu Cameras UAE — Dual-Lens AI Surveillance Dubai",
+    description: "Buy Hikvision TandemVu cameras in UAE from the official authorized distributor. Dual-lens AI-powered surveillance combining thermal & HD imaging for Dubai, Abu Dhabi & all Emirates. Expert installation & 24/7 support.",
+    keywords: ["Hikvision TandemVu UAE", "TandemVu cameras Dubai", "dual-lens surveillance UAE", "thermal AI cameras Dubai", "wide-area CCTV UAE", "TandemVu price UAE", "smart city cameras Dubai", "Hikvision TandemVu distributor"],
+  },
+  acusense: {
+    title: "Hikvision AcuSense UAE — AI Human & Vehicle Detection Dubai",
+    description: "Hikvision AcuSense cameras in UAE — AI-powered human and vehicle detection with 90% false alarm reduction. Official distributor in Dubai, Abu Dhabi, Sharjah. Professional installation & maintenance.",
+    keywords: ["Hikvision AcuSense UAE", "AcuSense cameras Dubai", "AI CCTV UAE", "human detection cameras UAE", "vehicle detection CCTV Dubai", "smart security cameras UAE", "AcuSense distributor Dubai", "false alarm reduction CCTV"],
+  },
+  darkfighter: {
+    title: "Hikvision DarkFighter UAE — Full-Color Night Vision CCTV Dubai",
+    description: "Hikvision DarkFighter cameras in UAE — full-color night vision in near-total darkness. Official authorized distributor in Dubai. Ultra-low light CCTV for residential, commercial & industrial use across all Emirates.",
+    keywords: ["Hikvision DarkFighter UAE", "DarkFighter cameras Dubai", "night vision CCTV UAE", "low-light cameras Dubai", "full-color night cameras UAE", "DarkFighter price UAE", "DarkFighter distributor Dubai", "24/7 color surveillance UAE"],
+  },
+  colorvu: {
+    title: "Hikvision ColorVu UAE — 24/7 Vivid Color Cameras Dubai",
+    description: "Hikvision ColorVu cameras in UAE — 24/7 vivid full-color surveillance even in darkness. Official distributor in Dubai, Abu Dhabi, Sharjah. Large aperture sensors with supplemental lighting for all environments.",
+    keywords: ["Hikvision ColorVu UAE", "ColorVu cameras Dubai", "24/7 color CCTV UAE", "full-color surveillance Dubai", "ColorVu price UAE", "ColorVu distributor Dubai", "color night vision cameras UAE", "vivid color security camera UAE"],
+  },
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ tech: string }> }): Promise<Metadata> {
+  const { tech } = await params;
+  const meta = techMeta[tech] ?? {
+    title: `Hikvision ${tech} UAE — Advanced Security Technology Dubai`,
+    description: `Explore Hikvision ${tech} technology in UAE. Official authorized distributor in Dubai with expert installation across all Emirates.`,
+    keywords: ["Hikvision UAE", "security cameras Dubai", "CCTV UAE"],
+  };
+  return {
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `${SITE_URL}/technologies/${tech}`,
+      images: [{ url: `${SITE_URL}/Technologies/${tech.charAt(0).toUpperCase() + tech.slice(1)}.png`, alt: meta.title }],
+    },
+    alternates: { canonical: `${SITE_URL}/technologies/${tech}` },
+  };
+}
 
 export default async function TechnologySubPage({ params }: { params: Promise<{ tech: string }> }) {
   const resolvedParams = await params;
+
+  const techFAQs: Record<string, { q: string; a: string }[]> = {
+    tandemvu: [
+      { q: "What is Hikvision TandemVu technology?", a: "TandemVu is Hikvision's dual-lens camera technology that combines a wide-angle panoramic view with a detail-tracking PTZ lens in a single device, enabling comprehensive area coverage and precise subject tracking simultaneously." },
+      { q: "Where can I buy Hikvision TandemVu cameras in UAE?", a: "You can purchase genuine Hikvision TandemVu cameras from Hikvision UAE, the official authorized distributor located in Dubai. We serve all emirates including Abu Dhabi, Sharjah, and Ajman with professional installation." },
+      { q: "Is TandemVu suitable for Dubai's extreme heat?", a: "Yes. TandemVu cameras are desert-ready with IP66/67 ratings and operate reliably at temperatures up to 60°C, making them ideal for UAE's outdoor surveillance requirements." },
+    ],
+    acusense: [
+      { q: "What is Hikvision AcuSense technology?", a: "AcuSense is Hikvision's deep learning AI technology that accurately distinguishes humans and vehicles from other moving objects, reducing false alarms by up to 90% and enabling smarter security responses." },
+      { q: "How does AcuSense reduce false alarms?", a: "AcuSense uses deep neural networks to classify motion events. Instead of alerting on animals, foliage, or environmental changes, it only triggers alerts when humans or vehicles enter monitored zones." },
+      { q: "Are Hikvision AcuSense cameras available in Dubai?", a: "Yes. Hikvision UAE is the official authorized distributor of AcuSense cameras in Dubai and across all UAE emirates, offering professional installation, configuration, and after-sales support." },
+    ],
+    darkfighter: [
+      { q: "What is Hikvision DarkFighter technology?", a: "DarkFighter is Hikvision's ultra-low-light imaging technology featuring high-sensitivity sensors and advanced optical design to capture clear, full-color video in near-total darkness without IR illumination." },
+      { q: "How dark can DarkFighter cameras see?", a: "Hikvision DarkFighter cameras can produce clear color images at illumination as low as 0.001 lux, making them effective in environments with minimal ambient light such as parking areas, alleys, and warehouses." },
+      { q: "Can I get DarkFighter cameras installed in Abu Dhabi?", a: "Yes. Hikvision UAE provides DarkFighter camera installation across all UAE emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain." },
+    ],
+    colorvu: [
+      { q: "What is Hikvision ColorVu technology?", a: "ColorVu is Hikvision's 24/7 full-color surveillance technology that uses large aperture lenses, high-performance image sensors, and intelligent supplemental lighting to deliver vivid color video even in complete darkness." },
+      { q: "What is the difference between ColorVu and DarkFighter?", a: "ColorVu uses supplemental warm-white LED lighting to ensure full color images in darkness, while DarkFighter relies solely on sensor sensitivity. ColorVu produces brighter, more detailed color images at night; DarkFighter is more discreet." },
+      { q: "Where can I buy ColorVu cameras in Dubai?", a: "Hikvision UAE — the official authorized distributor — supplies and installs ColorVu cameras in Dubai, Abu Dhabi, Sharjah, and all UAE emirates. Contact us at +971 50 969 3134 for pricing and consultation." },
+    ],
+  };
+
+
   
   // Define specific content for various technologies
   const techMap: Record<string, any> = {
@@ -726,6 +798,71 @@ export default async function TechnologySubPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
+
+      {/* FAQ Section — AEO/GEO for ChatGPT & Gemini */}
+      {techFAQs[resolvedParams.tech] && (
+        <>
+          {/* FAQPage JSON-LD */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: techFAQs[resolvedParams.tech].map(({ q, a }) => ({
+                  "@type": "Question",
+                  name: q,
+                  acceptedAnswer: { "@type": "Answer", text: a },
+                })),
+              }),
+            }}
+          />
+          {/* BreadcrumbList JSON-LD */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+                  { "@type": "ListItem", position: 2, name: "Technologies", item: `${SITE_URL}/technologies` },
+                  { "@type": "ListItem", position: 3, name: techData.metaTitle.split(" – ")[0], item: `${SITE_URL}/technologies/${resolvedParams.tech}` },
+                ],
+              }),
+            }}
+          />
+
+          {/* Visible FAQ Section */}
+          <section className="py-20 bg-white border-t border-gray-100">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-14">
+                <h2 className="text-[10px] font-black text-maroon uppercase tracking-[0.4em] mb-4">Frequently Asked Questions</h2>
+                <h3 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tight">
+                  Common Questions About <span className="text-maroon capitalize">{resolvedParams.tech}</span>
+                </h3>
+                <div className="w-20 h-1 bg-gold mx-auto rounded-full mt-6" />
+              </div>
+              <div className="space-y-6">
+                {techFAQs[resolvedParams.tech].map(({ q, a }, i) => (
+                  <div key={i} className="bg-gray-50 rounded-[24px] p-8 border border-gray-100 hover:border-maroon/20 transition-all duration-300 group">
+                    <h4 className="text-lg font-black text-gray-900 mb-3 group-hover:text-maroon transition-colors uppercase tracking-tight">
+                      {q}
+                    </h4>
+                    <p className="text-gray-600 font-medium leading-relaxed text-sm">{a}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-12 text-center">
+                <p className="text-sm text-gray-400 font-bold uppercase tracking-widest mb-4">Still have questions?</p>
+                <Link href="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-maroon text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-gold hover:text-maroon transition-all shadow-xl">
+                  Contact Our Experts <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
     </div>
   );
 }

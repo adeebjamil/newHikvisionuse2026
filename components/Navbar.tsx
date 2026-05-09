@@ -65,7 +65,7 @@ export default function Navbar() {
             <div className="animate-marquee whitespace-nowrap py-1 flex items-center">
                 <img src="/navbar/bluetick.png" alt="Verified" className="h-4 w-4 object-contain inline-block mr-2" />
                 <span className="text-[10px] font-black tracking-[0.2em] uppercase bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer">
-                  #1 CCTV DISTRIBUTER IN UAE | DUBAI | SHARJAH | AJMAN
+                  #1 CCTV DISTRIBUTOR IN UAE | DUBAI | SHARJAH | AJMAN
                 </span>
                 
                 <span className="mx-8 text-gold opacity-50">|</span>
@@ -80,7 +80,7 @@ export default function Navbar() {
 
                 <img src="/navbar/bluetick.png" alt="Verified" className="h-4 w-4 object-contain inline-block mr-2" />
                 <span className="text-[10px] font-black tracking-[0.2em] uppercase bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent bg-[length:200%_auto] animate-shimmer">
-                  #1 CCTV DISTRIBUTER IN UAE | DUBAI | SHARJAH | AJMAN
+                  #1 CCTV DISTRIBUTOR IN UAE | DUBAI | SHARJAH | AJMAN
                 </span>
                 
                 <span className="mx-8 text-gold opacity-50">|</span>
