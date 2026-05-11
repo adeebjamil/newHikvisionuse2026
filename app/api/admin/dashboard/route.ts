@@ -7,7 +7,7 @@ import { Newsletter } from "@/models/Newsletter";
 import { SubCategory } from "@/models/SubCategory";
 import { Contact } from "@/models/Contact";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 
 export async function GET(req: Request) {
   try {

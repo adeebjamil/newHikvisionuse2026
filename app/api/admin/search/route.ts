@@ -4,7 +4,7 @@ import { Category } from "@/models/Category";
 import { SubCategory } from "@/models/SubCategory";
 import { Product } from "@/models/Product";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 
 async function validateSession() {
   const session = await getServerSession(authOptions);
