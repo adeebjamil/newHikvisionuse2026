@@ -103,7 +103,7 @@ export default function AdminDashboard() {
           </div>
           <button 
             onClick={fetchDashboardData}
-            className="px-8 py-4 bg-maroon text-white rounded-3xl font-black text-sm shadow-xl shadow-maroon/20 hover:bg-maroon transition-all flex items-center gap-3 active:scale-95"
+            className="px-8 py-4 bg-maroon text-white rounded-3xl font-black text-sm shadow-xl shadow-maroon/20 hover:bg-gray-900 transition-all flex items-center gap-3 active:scale-95"
           >
             <RefreshCw size={18} />
             <span>Update Metrics</span>
@@ -322,7 +322,7 @@ export default function AdminDashboard() {
 
         {/* System Health / Storage Mockup */}
         <div className="bg-[#6b0000] p-8 rounded-[40px] text-white overflow-hidden relative border border-white/5 shadow-2xl">
-           <h3 className="text-xl font-black uppercase tracking-tight mb-1 relative z-10">System <span className="text-white">Health</span></h3>
+           <h3 className="text-xl font-black uppercase tracking-tight mb-1 relative z-10">System <span className="text-white"> Health</span></h3>
            <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-10 relative z-10">Performance Matrix</p>
            
            <div className="space-y-6 relative z-10">

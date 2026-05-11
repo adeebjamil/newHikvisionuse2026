@@ -4,8 +4,8 @@ import { SubCategory } from "@/models/SubCategory";
 import { Category } from "@/models/Category";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { writeFile } from "fs/promises";
-import path from "path";
+import { uploadBufferToCloudinary } from "@/lib/cloudinary";
+
 
 import { Product } from "@/models/Product";
 
@@ -60,10 +60,10 @@ export async function POST(req: Request) {
     let imageUrl = "";
     if (imageFile && imageFile.size > 0) {
       const buffer = Buffer.from(await imageFile.arrayBuffer());
-      const filename = `${Date.now()}-${imageFile.name}`;
-      await writeFile(path.join(process.cwd(), "public", "uploads", filename), buffer);
-      imageUrl = `/uploads/${filename}`;
+      const url = await uploadBufferToCloudinary(buffer, "subcategories");
+      imageUrl = url as string;
     }
+
 
     const newSubCategory = await SubCategory.create({ name, slug, category, image: imageUrl });
     return NextResponse.json({ success: true, data: newSubCategory }, { status: 201 });
@@ -102,10 +102,10 @@ export async function PUT(req: Request) {
 
     if (imageFile && imageFile.size > 0) {
       const buffer = Buffer.from(await imageFile.arrayBuffer());
-      const filename = `${Date.now()}-${imageFile.name}`;
-      await writeFile(path.join(process.cwd(), "public", "uploads", filename), buffer);
-      updateData.image = `/uploads/${filename}`;
+      const url = await uploadBufferToCloudinary(buffer, "subcategories");
+      updateData.image = url as string;
     }
+
 
     const updatedSubCategory = await SubCategory.findByIdAndUpdate(id, updateData, { new: true });
     return NextResponse.json({ success: true, data: updatedSubCategory });

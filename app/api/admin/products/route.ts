@@ -3,8 +3,8 @@ import { connectToDatabase } from "@/lib/mongodb";
 import { Product } from "@/models/Product";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { writeFile } from "fs/promises";
-import path from "path";
+import { uploadBufferToCloudinary } from "@/lib/cloudinary";
+
 
 async function validateSession() {
   const session = await getServerSession(authOptions);
@@ -45,11 +45,11 @@ export async function POST(req: Request) {
     for (const file of imageFiles) {
       if (file && file.size > 0) {
         const buffer = Buffer.from(await file.arrayBuffer());
-        const filename = `${Date.now()}-${file.name}`;
-        await writeFile(path.join(process.cwd(), "public", "uploads", filename), buffer);
-        imageUrls.push(`/uploads/${filename}`);
+        const url = await uploadBufferToCloudinary(buffer, "products");
+        imageUrls.push(url as string);
       }
     }
+
 
     const product = await Product.create({ name, slug, subTitle, description, features, keyFeatures, category, subCategory, isFeatured, images: imageUrls });
     return NextResponse.json({ success: true, data: product }, { status: 201 });
@@ -99,11 +99,11 @@ export async function PUT(req: Request) {
       for (const file of imageFiles) {
         if (file && file.size > 0) {
           const buffer = Buffer.from(await file.arrayBuffer());
-          const filename = `${Date.now()}-${file.name}`;
-          await writeFile(path.join(process.cwd(), "public", "uploads", filename), buffer);
-          imageUrls.push(`/uploads/${filename}`);
+          const url = await uploadBufferToCloudinary(buffer, "products");
+          imageUrls.push(url as string);
         }
       }
+
       updateData.images = imageUrls;
     }
 

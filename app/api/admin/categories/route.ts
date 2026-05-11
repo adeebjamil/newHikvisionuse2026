@@ -3,8 +3,8 @@ import { connectToDatabase } from "@/lib/mongodb";
 import { Category } from "@/models/Category";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { writeFile } from "fs/promises";
-import path from "path";
+import { uploadBufferToCloudinary } from "@/lib/cloudinary";
+
 
 import { Product } from "@/models/Product";
 
@@ -67,11 +67,10 @@ export async function POST(req: Request) {
 
     if (imageFile && imageFile.size > 0) {
       const buffer = Buffer.from(await imageFile.arrayBuffer());
-      const filename = `${Date.now()}-${imageFile.name}`;
-      const filepath = path.join(process.cwd(), "public", "uploads", filename);
-      await writeFile(filepath, buffer);
-      imageUrl = `/uploads/${filename}`;
+      const url = await uploadBufferToCloudinary(buffer, "categories");
+      imageUrl = url as string;
     }
+
 
     const newCategory = await Category.create({ name, slug, image: imageUrl });
     return NextResponse.json({ success: true, data: newCategory }, { status: 201 });
@@ -102,11 +101,10 @@ export async function PUT(req: Request) {
 
     if (imageFile && imageFile.size > 0) {
       const buffer = Buffer.from(await imageFile.arrayBuffer());
-      const filename = `${Date.now()}-${imageFile.name}`;
-      const filepath = path.join(process.cwd(), "public", "uploads", filename);
-      await writeFile(filepath, buffer);
-      updateData.image = `/uploads/${filename}`;
+      const url = await uploadBufferToCloudinary(buffer, "categories");
+      updateData.image = url as string;
     }
+
 
     const updatedCategory = await Category.findByIdAndUpdate(id, updateData, { new: true });
     if (!updatedCategory) {
