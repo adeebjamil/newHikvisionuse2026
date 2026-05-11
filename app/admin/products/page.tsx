@@ -64,6 +64,7 @@ export default function ProductsPage() {
           subCategory: prod.subCategory?.name || "N/A",
           date: new Date(prod.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
         }));
+        console.log("Formatted Products Data:", formattedData);
         setData(formattedData);
       }
     } catch (error) {
@@ -202,7 +203,15 @@ export default function ProductsPage() {
       render: (val: string, item: any) => (
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
-             {item.image ? <Image src={item.image} alt={val} width={32} height={32} className="object-contain" /> : <Package className="text-gray-200" />}
+             {item.image ? (
+                <Image 
+                  src={item.image.startsWith('http') ? item.image : `/uploads/${item.image}`} 
+                  alt={val} 
+                  width={32} 
+                  height={32} 
+                  className="object-contain" 
+                />
+              ) : <Package className="text-gray-200" />}
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-black text-gray-900 flex items-center gap-2">

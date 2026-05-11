@@ -4,6 +4,7 @@ import { Product } from "@/models/Product";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { uploadBufferToCloudinary } from "@/lib/cloudinary";
+import mongoose from "mongoose";
 
 
 async function validateSession() {
@@ -109,7 +110,13 @@ export async function PUT(req: Request) {
     const isFeatured = formData.get("isFeatured") === "true";
     const imageFiles = formData.getAll("images");
 
+    console.log("PUT Product Update Request:", { id, name, slug, category, subCategory });
+
     if (!id) return NextResponse.json({ success: false, message: "ID is required" }, { status: 400 });
+    
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return NextResponse.json({ success: false, message: "Invalid Product ID format" }, { status: 400 });
+    }
 
     const updateData: any = { 
       name, 
@@ -121,8 +128,8 @@ export async function PUT(req: Request) {
       isFeatured 
     };
 
-    if (category) updateData.category = category;
-    if (subCategory) updateData.subCategory = subCategory;
+    if (category && category !== "undefined" && category !== "") updateData.category = category;
+    if (subCategory && subCategory !== "undefined" && subCategory !== "") updateData.subCategory = subCategory;
 
     // Only update images if new ones are provided
     const newImageUrls: string[] = [];
@@ -131,9 +138,13 @@ export async function PUT(req: Request) {
     for (const file of imageFiles) {
       if (file instanceof File && file.size > 0) {
         hasNewImages = true;
+        console.log("Uploading new image to Cloudinary...");
         const buffer = Buffer.from(await file.arrayBuffer());
         const url = await uploadBufferToCloudinary(buffer, "products");
-        if (url) newImageUrls.push(url as string);
+        if (url) {
+          console.log("New image uploaded:", url);
+          newImageUrls.push(url as string);
+        }
       }
     }
 
@@ -141,15 +152,24 @@ export async function PUT(req: Request) {
       updateData.images = newImageUrls;
     }
 
-    const product = await Product.findByIdAndUpdate(id, updateData, { new: true });
-    
-    if (!product) {
-      return NextResponse.json({ success: false, message: "Product not found" }, { status: 404 });
-    }
+    try {
+      const product = await Product.findByIdAndUpdate(id, updateData, { new: true });
+      
+      if (!product) {
+        return NextResponse.json({ success: false, message: "Product not found" }, { status: 404 });
+      }
 
-    return NextResponse.json({ success: true, data: product });
+      console.log("Product updated successfully:", product._id);
+      return NextResponse.json({ success: true, data: product });
+    } catch (dbError: any) {
+      console.error("Database Update Error:", dbError);
+      if (dbError.code === 11000) {
+        return NextResponse.json({ success: false, message: "A product with this slug already exists." }, { status: 400 });
+      }
+      throw dbError;
+    }
   } catch (error: any) {
-    console.error("PUT Product Error:", error);
+    console.error("PUT Product Final Error:", error);
     return NextResponse.json({ success: false, message: error.message || "Server error" }, { status: 500 });
   }
 }
