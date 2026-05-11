@@ -2,13 +2,18 @@ import { NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Product } from "@/models/Product";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { uploadBufferToCloudinary } from "@/lib/cloudinary";
 
 
 async function validateSession() {
-  const session = await getServerSession(authOptions);
-  return !!session;
+  try {
+    const session = await getServerSession(authOptions);
+    return !!session;
+  } catch (error) {
+    console.error("Session validation error:", error);
+    return false;
+  }
 }
 
 export async function GET(req: Request) {
@@ -17,8 +22,9 @@ export async function GET(req: Request) {
     if (!(await validateSession())) return NextResponse.json({ success: false, message: "Unauthorized" }, { status: 401 });
     const products = await Product.find({}).populate("category", "name").populate("subCategory", "name").sort({ createdAt: -1 });
     return NextResponse.json({ success: true, data: products });
-  } catch (error) {
-    return NextResponse.json({ success: false, message: "Server error" }, { status: 500 });
+  } catch (error: any) {
+    console.error("GET Products Error:", error);
+    return NextResponse.json({ success: false, message: error.message || "Server error" }, { status: 500 });
   }
 }
 
@@ -39,22 +45,34 @@ export async function POST(req: Request) {
     const keyFeaturesStr = formData.get("keyFeatures") as string;
     const keyFeatures = keyFeaturesStr ? keyFeaturesStr.split("\n").map(f => f.trim()).filter(f => f) : [];
     const isFeatured = formData.get("isFeatured") === "true";
-    const imageFiles = formData.getAll("images") as File[];
+    const imageFiles = formData.getAll("images");
 
     const imageUrls: string[] = [];
     for (const file of imageFiles) {
-      if (file && file.size > 0) {
+      if (file instanceof File && file.size > 0) {
         const buffer = Buffer.from(await file.arrayBuffer());
         const url = await uploadBufferToCloudinary(buffer, "products");
-        imageUrls.push(url as string);
+        if (url) imageUrls.push(url as string);
       }
     }
 
 
-    const product = await Product.create({ name, slug, subTitle, description, features, keyFeatures, category, subCategory, isFeatured, images: imageUrls });
+    const product = await Product.create({ 
+      name, 
+      slug, 
+      subTitle, 
+      description, 
+      features, 
+      keyFeatures, 
+      category: category || undefined, 
+      subCategory: subCategory || undefined, 
+      isFeatured, 
+      images: imageUrls 
+    });
     return NextResponse.json({ success: true, data: product }, { status: 201 });
   } catch (error: any) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
+    console.error("POST Product Error:", error);
+    return NextResponse.json({ success: false, message: error.message || "Server error" }, { status: 500 });
   }
 }
 
@@ -65,8 +83,9 @@ export async function DELETE(req: Request) {
     const { id } = await req.json();
     await Product.findByIdAndDelete(id);
     return NextResponse.json({ success: true });
-  } catch (error) {
-    return NextResponse.json({ success: false, message: "Server error" }, { status: 500 });
+  } catch (error: any) {
+    console.error("DELETE Product Error:", error);
+    return NextResponse.json({ success: false, message: error.message || "Server error" }, { status: 500 });
   }
 }
 
@@ -88,28 +107,49 @@ export async function PUT(req: Request) {
     const keyFeaturesStr = formData.get("keyFeatures") as string;
     const keyFeatures = keyFeaturesStr ? keyFeaturesStr.split("\n").map(f => f.trim()).filter(f => f) : [];
     const isFeatured = formData.get("isFeatured") === "true";
-    const imageFiles = formData.getAll("images") as File[];
+    const imageFiles = formData.getAll("images");
 
     if (!id) return NextResponse.json({ success: false, message: "ID is required" }, { status: 400 });
 
-    const updateData: any = { name, slug, subTitle, description, features, keyFeatures, category, subCategory, isFeatured };
+    const updateData: any = { 
+      name, 
+      slug, 
+      subTitle, 
+      description, 
+      features, 
+      keyFeatures, 
+      isFeatured 
+    };
 
-    if (imageFiles.length > 0 && imageFiles[0].size > 0) {
-      const imageUrls: string[] = [];
-      for (const file of imageFiles) {
-        if (file && file.size > 0) {
-          const buffer = Buffer.from(await file.arrayBuffer());
-          const url = await uploadBufferToCloudinary(buffer, "products");
-          imageUrls.push(url as string);
-        }
+    if (category) updateData.category = category;
+    if (subCategory) updateData.subCategory = subCategory;
+
+    // Only update images if new ones are provided
+    const newImageUrls: string[] = [];
+    let hasNewImages = false;
+
+    for (const file of imageFiles) {
+      if (file instanceof File && file.size > 0) {
+        hasNewImages = true;
+        const buffer = Buffer.from(await file.arrayBuffer());
+        const url = await uploadBufferToCloudinary(buffer, "products");
+        if (url) newImageUrls.push(url as string);
       }
+    }
 
-      updateData.images = imageUrls;
+    if (hasNewImages) {
+      updateData.images = newImageUrls;
     }
 
     const product = await Product.findByIdAndUpdate(id, updateData, { new: true });
+    
+    if (!product) {
+      return NextResponse.json({ success: false, message: "Product not found" }, { status: 404 });
+    }
+
     return NextResponse.json({ success: true, data: product });
   } catch (error: any) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
+    console.error("PUT Product Error:", error);
+    return NextResponse.json({ success: false, message: error.message || "Server error" }, { status: 500 });
   }
 }

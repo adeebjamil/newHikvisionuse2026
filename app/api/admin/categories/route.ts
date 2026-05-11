@@ -2,15 +2,18 @@ import { NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Category } from "@/models/Category";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { uploadBufferToCloudinary } from "@/lib/cloudinary";
-
-
 import { Product } from "@/models/Product";
 
 async function validateSession() {
-  const session = await getServerSession(authOptions);
-  return !!session;
+  try {
+    const session = await getServerSession(authOptions);
+    return !!session;
+  } catch (error) {
+    console.error("Session validation error:", error);
+    return false;
+  }
 }
 
 export async function GET(req: Request) {
